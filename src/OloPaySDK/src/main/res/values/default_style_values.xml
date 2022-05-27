@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <!--
+ Copyright © 2022 Olo Inc. All rights reserved.
+ This software is made available under the Olo Pay SDK License (See LICENSE.md file)
+ -->
+<resources>
+    <!--
+        Base style values: The majority of other control-specific values are defined in terms of these colors.
+        This allows for varying levels of granularity... e.g. You can change all error text colors by
+        overriding a single color value, or you can change one control-specific instance to a different
+        color by overriding one of the control-specific values.
+    -->
+    <dimen name="olopay_textsize">14sp</dimen>
+    <color name="olopay_hintcolor">@android:color/darker_gray</color>
+    <color name="olopay_edittext_textcolor">@android:color/black</color>
+    <color name="olopay_errortext_textcolor">@android:color/holo_red_dark</color>
+    <dimen name="olopay_errortext_textsize">@dimen/olopay_textsize</dimen>
+
+    <!-- ============================================================ -->
+    <!-- ============= PaymentCardDetailsSingleLineView ============= -->
+    <!-- ============================================================ -->
+    <dimen name="olopay_paymentcarddetailssinglelineview_edittext_textsize">@dimen/olopay_textsize</dimen>
+    <color name="olopay_paymentcarddetailssinglelineview_edittext_textcolor">@color/olopay_edittext_textcolor</color>
+    <color name="olopay_paymentcarddetailssinglelineview_edittext_errorcolor">@color/olopay_errortext_textcolor</color>
+    <color name="olopay_paymentcarddetailssinglelineview_edittext_hintcolor">@color/olopay_hintcolor</color>
+    <color name="olopay_paymentcarddetailssinglelineview_cardicon_tint">@android:color/darker_gray</color>
+    <dimen name="olopay_paymentcarddetailssinglelineview_errortext_textsize">@dimen/olopay_errortext_textsize</dimen>
+    <color name="olopay_paymentcarddetailssinglelineview_errortext_textcolor">@color/olopay_errortext_textcolor</color>
+
+    <!-- ============================================================ -->
+    <!-- ============= PaymentCardDetailsMultiLineView ============== -->
+    <!-- ============================================================ -->
+    <color name="olopay_paymentcarddetailsmultilineview_edittext_hintcolor">@color/olopay_hintcolor</color>
+    <color name="olopay_paymentcarddetailsmultilineview_edittext_floatinghintcolor">@color/olopay_hintcolor</color>
+    <dimen name="olopay_paymentcarddetailsmultilineview_edittext_floatinglabeltextsize">@dimen/olopay_textsize</dimen>
+    <color name="olopay_paymentcarddetailsmultilineview_edittext_errorcolor">@color/olopay_errortext_textcolor</color>
+    <dimen name="olopay_paymentcarddetailsmultilineview_errortext_textsize">@dimen/olopay_errortext_textsize</dimen>
+    <color name="olopay_paymentcarddetailsmultilineview_errortext_textcolor">@color/olopay_errortext_textcolor</color>
+
+    <!-- ============================================================ -->
+    <!-- ================= PaymentCardDetailsForm =================== -->
+    <!-- ============================================================ -->
+    <color name="olopay_paymentcarddetailsform_edittext_textcolor">@color/olopay_edittext_textcolor</color>
+    <color name="olopay_paymentcarddetailsform_edittext_disabledtextcolor">#3D3D3D</color>
+    <color name="olopay_paymentcarddetailsform_background">@android:color/transparent</color>
+    <color name="olopay_paymentcarddetailsform_disabledbackground">#f8f8f8</color>
+    <color name="olopay_paymentcarddetailsform_errorcolor">@color/olopay_errortext_textcolor</color>
+    <color name="olopay_paymentcarddetailsform_bordercolor">#33787880</color>
+</resources>

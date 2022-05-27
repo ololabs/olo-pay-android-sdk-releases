@@ -1,0 +1,137 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>OloPaySDK</title>
+<link href="images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="scripts/sourceset_dependencies.js" async="async"></script><link href="styles/style.css" rel="Stylesheet"><link href="styles/jetbrains-mono.css" rel="Stylesheet"><link href="styles/main.css" rel="Stylesheet"><link href="styles/prism.css" rel="Stylesheet"><link href="styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="scripts/clipboard.js" async="async"></script><script type="text/javascript" src="scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="scripts/main.js" async="async"></script><script type="text/javascript" src="scripts/prism.js" async="async"></script><link href="styles/olopay-styles.css" rel="Stylesheet">  </head>
+  <body>
+    <div class="navigation-wrapper" id="navigation-wrapper">
+      <div id="leftToggler"><span class="icon-toggler"></span></div>
+      <div class="library-name"><a href="index.html">OloPaySDK</a></div>
+      <div>1.2.1</div>
+      <div class="pull-right d-flex"><button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main"><script type="text/javascript" src="scripts/main.js"></script>
+        <div class="main-content" id="content" pageIds="OloPaySDK::////PointingToDeclaration//-374960122">
+          <div class="breadcrumbs"></div>
+          <div class="cover ">
+            <h1 class="cover"><span>Olo</span><wbr></wbr><span>Pay</span><wbr></wbr><span><span>SDK</span></span></h1>
+            <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><h2 class=""> Getting Started</h2><p class="paragraph">The Olo Pay SDK enables easy PCI-compliant payment integration with the Olo Ordering API. At a high level, usage follows this paradigm:</p><hr class="spacer"><ol><li><p class="paragraph">Add the SDK as a dependency</p></li><ul><li><p class="paragraph">Using Gradle/Maven (Recommended)</p></li><ul><li><p class="paragraph">Add the following to your app's gradle file <code class="lang-kotlin">implementation com.olo.olopay:olo-pay-android-sdk:version</code></p></li></ul><li><p class="paragraph">Using The Compiled Library Directly </p></li><ul><li><p class="paragraph">NOTE: Steps will vary based on your chosen IDE and build system. Steps provided are for Android Studio/Gradle</p></li><li><p class="paragraph">Add the following to your app's gradle file</p></li><ul><li><p class="paragraph">implementation files('/path/to/aar')</p></li><li><p class="paragraph">implementation &quot;com.stripe:stripe-android:20.4.0&quot;</p></li><li><p class="paragraph">implementation &quot;androidx.core:core-ktx:1.7.0&quot;</p></li><li><p class="paragraph">implementation &quot;com.google.android.material:material:1.6.0&quot;</p></li></ul></ul></ul><li><p class="paragraph">Initialize the SDK on application startup</p></li><ul><li><p class="paragraph">See the <code class="lang-kotlin">com.olo.olopay.bootstrap</code> package for options</p></li><li><p class="paragraph">See the <code class="lang-kotlin">com.olo.olopay.api.OloPayApiInitializer</code> class</p></li></ul><li><p class="paragraph">Add a payment control to your app</p></li><ul><li><p class="paragraph">See the <code class="lang-kotlin">com.olo.olopay.controls</code> package</p></li><li><p class="paragraph">See the <code class="lang-kotlin">com.olo.olopay.googlepay.GooglePayContext</code> class</p></li></ul><li><p class="paragraph">Using the <code class="lang-kotlin">IPaymentMethodParams</code> instance from the payment control, create an <code class="lang-kotlin">IPaymentMethod</code> instance via <code class="lang-kotlin">OloPayAPI.createPaymentMethod()</code></p></li><ul><li><p class="paragraph">See the <code class="lang-kotlin">com.olo.olopay.api</code> package</p></li></ul><li><p class="paragraph">Submit the <code class="lang-kotlin">IPaymentMethod</code> data to the <a href="https://developer.olo.com/docs/load/olopay#section/Submitting-a-Basket-via-the-Ordering-API">Basket Submit</a> endpoint of Olo's Ordering API</p></li></ol></div></div>
+          </div>
+          <h2 class="">Packages</h2>
+          <div class="table"><a data-name="-2077597747%2FPackages%2F-374960122" anchor-label="com.olo.olopay.api" id="-2077597747%2FPackages%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+            <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+              <div>
+                <div class="main-subrow ">
+                  <div class=""><span class="inline-flex"><a href="-olo-pay-s-d-k/com.olo.olopay.api/index.html">com.olo.olopay.api</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2077597747%2FPackages%2F-374960122"></span>
+                        <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                      </span></span></div>
+                  <div class="pull-right"></div>
+                </div>
+                <div><span class="brief-comment"><a data-name="-2077597747%2FPackages%2F-374960122" anchor-label="com.olo.olopay.api" id="-2077597747%2FPackages%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                    <p class="paragraph">The Olo Pay API implementation, which is used for creating an <code class="lang-kotlin">IPaymentMethod</code> instance from user-entered card details</p>
+                  </span></div>
+              </div>
+            </div>
+<a data-name="-1136053663%2FPackages%2F-374960122" anchor-label="com.olo.olopay.bootstrap" id="-1136053663%2FPackages%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+            <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+              <div>
+                <div class="main-subrow ">
+                  <div class=""><span class="inline-flex"><a href="-olo-pay-s-d-k/com.olo.olopay.bootstrap/index.html">com.olo.olopay.bootstrap</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1136053663%2FPackages%2F-374960122"></span>
+                        <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                      </span></span></div>
+                  <div class="pull-right"></div>
+                </div>
+                <div><span class="brief-comment"><a data-name="-1136053663%2FPackages%2F-374960122" anchor-label="com.olo.olopay.bootstrap" id="-1136053663%2FPackages%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                    <p class="paragraph">When the application starts, the Olo Pay SDK needs to be initialized by calling <code class="lang-kotlin">OloPayApiInitializer().setup()</code>. Classes in this package can help with the initialization.</p>
+                  </span></div>
+              </div>
+            </div>
+<a data-name="-627353241%2FPackages%2F-374960122" anchor-label="com.olo.olopay.controls" id="-627353241%2FPackages%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+            <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+              <div>
+                <div class="main-subrow ">
+                  <div class=""><span class="inline-flex"><a href="-olo-pay-s-d-k/com.olo.olopay.controls/index.html">com.olo.olopay.controls</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-627353241%2FPackages%2F-374960122"></span>
+                        <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                      </span></span></div>
+                  <div class="pull-right"></div>
+                </div>
+                <div><span class="brief-comment"><a data-name="-627353241%2FPackages%2F-374960122" anchor-label="com.olo.olopay.controls" id="-627353241%2FPackages%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                    <p class="paragraph">The Olo Pay SDK provides three controls for capturing card details from a user. They are PCI-compliant and can be added to your application layouts just like any standard View.</p>
+                  </span></div>
+              </div>
+            </div>
+<a data-name="-2016822393%2FPackages%2F-374960122" anchor-label="com.olo.olopay.controls.callbacks" id="-2016822393%2FPackages%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+            <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+              <div>
+                <div class="main-subrow ">
+                  <div class=""><span class="inline-flex"><a href="-olo-pay-s-d-k/com.olo.olopay.controls.callbacks/index.html">com.olo.olopay.controls.callbacks</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2016822393%2FPackages%2F-374960122"></span>
+                        <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                      </span></span></div>
+                  <div class="pull-right"></div>
+                </div>
+                <div><span class="brief-comment"><a data-name="-2016822393%2FPackages%2F-374960122" anchor-label="com.olo.olopay.controls.callbacks" id="-2016822393%2FPackages%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                    <p class="paragraph">Callbacks for responding to user input on the PCI-compliant credit card controls</p>
+                  </span></div>
+              </div>
+            </div>
+<a data-name="-1615202085%2FPackages%2F-374960122" anchor-label="com.olo.olopay.data" id="-1615202085%2FPackages%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+            <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+              <div>
+                <div class="main-subrow ">
+                  <div class=""><span class="inline-flex"><a href="-olo-pay-s-d-k/com.olo.olopay.data/index.html">com.olo.olopay.data</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1615202085%2FPackages%2F-374960122"></span>
+                        <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                      </span></span></div>
+                  <div class="pull-right"></div>
+                </div>
+                <div><span class="brief-comment"><a data-name="-1615202085%2FPackages%2F-374960122" anchor-label="com.olo.olopay.data" id="-1615202085%2FPackages%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                    <p class="paragraph">An assortment of data and enum classes used throughout the Olo Pay SDK</p>
+                  </span></div>
+              </div>
+            </div>
+<a data-name="53120885%2FPackages%2F-374960122" anchor-label="com.olo.olopay.exceptions" id="53120885%2FPackages%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+            <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+              <div>
+                <div class="main-subrow ">
+                  <div class=""><span class="inline-flex"><a href="-olo-pay-s-d-k/com.olo.olopay.exceptions/index.html">com.olo.olopay.exceptions</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="53120885%2FPackages%2F-374960122"></span>
+                        <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                      </span></span></div>
+                  <div class="pull-right"></div>
+                </div>
+                <div><span class="brief-comment"><a data-name="53120885%2FPackages%2F-374960122" anchor-label="com.olo.olopay.exceptions" id="53120885%2FPackages%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                    <p class="paragraph">Exceptions that can be thrown while making Olo Pay API calls</p>
+                  </span></div>
+              </div>
+            </div>
+<a data-name="-389023614%2FPackages%2F-374960122" anchor-label="com.olo.olopay.googlepay" id="-389023614%2FPackages%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+            <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+              <div>
+                <div class="main-subrow ">
+                  <div class=""><span class="inline-flex"><a href="-olo-pay-s-d-k/com.olo.olopay.googlepay/index.html">com.olo.olopay.googlepay</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-389023614%2FPackages%2F-374960122"></span>
+                        <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                      </span></span></div>
+                  <div class="pull-right"></div>
+                </div>
+                <div><span class="brief-comment"><a data-name="-389023614%2FPackages%2F-374960122" anchor-label="com.olo.olopay.googlepay" id="-389023614%2FPackages%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                    <p class="paragraph">Classes for adding Google Pay support to your app. </p>
+                  </span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  </body>
+</html>
+
