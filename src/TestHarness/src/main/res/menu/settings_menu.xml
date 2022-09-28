@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <!--
+ Copyright © 2022 Olo Inc. All rights reserved.
+ This software is made available under the Olo Pay SDK License (See LICENSE.md file)
+ -->
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/show_settings"
+        android:title="@string/done_button"
+        android:contentDescription="@string/settings_done_button_id"
+        app:showAsAction="always" />
+</menu>

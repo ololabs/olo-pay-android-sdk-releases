@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <!--
+ Copyright © 2022 Olo Inc. All rights reserved.
+ This software is made available under the Olo Pay SDK License (See LICENSE.md file)
+ -->
+<resources>
+    <!-- Empty Base OloPay Styles -->
+    <style name="OloPay" />
+    <style name="OloPay.PaymentCardDetailsSingleLineView" />
+    <style name="OloPay.PaymentCardDetailsMultiLineView" />
+
+    <!-- ============================================================ -->
+    <!-- ============= PaymentCardDetailsSingleLineView ============= -->
+    <!-- ============================================================ -->
+    <style name="CardInputWidget">
+        <item name="cardTextErrorColor">@color/olopay_paymentcarddetailssinglelineview_edittext_errorcolor</item>
+        <item name="cardTint">@color/olopay_paymentcarddetailssinglelineview_cardicon_tint</item>
+        <item name="android:focusedByDefault">false</item>
+    </style>
+
+    <style name="Stripe.CardInputWidget.EditText" parent="Stripe.Base.CardInputWidget.EditText">
+        <item name="android:textAppearance">@style/OloPay.PaymentCardDetailsSingleLineView.TextAppearance</item>
+        <item name="android:textColorHint">@color/olopay_paymentcarddetailssinglelineview_edittext_hintcolor</item>
+    </style>
+
+    <style name="OloPay.PaymentCardDetailsSingleLineView.TextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/olopay_paymentcarddetailssinglelineview_edittext_textcolor</item>
+        <item name="android:textSize">@dimen/olopay_paymentcarddetailssinglelineview_edittext_textsize</item>
+    </style>
+
+    <style name="OloPay.PaymentCardDetailsSingleLineView.ErrorText">
+        <item name="android:gravity">center</item>
+        <item name="android:textAppearance">@style/OloPay.PaymentCardDetailsSingleLineView.ErrorText.TextAppearance</item>
+    </style>
+
+    <style name="OloPay.PaymentCardDetailsSingleLineView.ErrorText.TextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/olopay_paymentcarddetailssinglelineview_errortext_textcolor</item>
+        <item name="android:textSize">@dimen/olopay_paymentcarddetailssinglelineview_errortext_textsize</item>
+    </style>
+
+    <!-- ============================================================ -->
+    <!-- ============= PaymentCardDetailsMultiLineView ============== -->
+    <!-- ============================================================ -->
+    <style name="OloPay.PaymentCardDetailsMultiLineView.ErrorText">
+        <item name="android:gravity">center</item>
+        <item name="android:textAppearance">@style/OloPay.PaymentCardDetailsMultiLineView.ErrorText.TextAppearance</item>
+    </style>
+    <style name="Stripe.CardMultilineWidget.TextInputLayout" parent="Stripe.Base.CardMultilineWidget.TextInputLayout">
+        <item name="hintTextAppearance">@style/OloPay.PaymentCardDetailsMultiLineView.TextInputLayout.HintTextAppearance</item>
+        <item name="android:textColorHint">@color/olopay_paymentcarddetailsmultilineview_edittext_hintcolor</item>
+    </style>
+
+    <style name="OloPay.PaymentCardDetailsMultiLineView.ErrorText.TextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/olopay_paymentcarddetailsmultilineview_edittext_errorcolor</item>
+        <item name="android:textSize">@dimen/olopay_paymentcarddetailsmultilineview_errortext_textsize</item>
+    </style>
+
+    <style name="OloPay.PaymentCardDetailsMultiLineView.TextInputLayout.HintTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/olopay_paymentcarddetailsmultilineview_edittext_floatinghintcolor</item>
+        <item name="android:textSize">@dimen/olopay_paymentcarddetailsmultilineview_edittext_floatinglabeltextsize</item>
+    </style>
+</resources>
