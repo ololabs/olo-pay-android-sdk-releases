@@ -1,0 +1,110 @@
+plugins {
+    id "com.android.library"
+    id "kotlin-android"
+    id "kotlin-kapt"
+    id "kotlin-parcelize"
+    id "org.jetbrains.dokka"
+}
+
+android {
+    compileSdkVersion 33
+    buildToolsVersion "33.0.0"
+
+    defaultConfig {
+        minSdkVersion 22
+        targetSdkVersion 33
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    flavorDimensions "OloPayEnv"
+    publishNonDefault true
+    productFlavors {
+        Dev {
+            dimension "OloPayEnv"
+            targetSdkVersion 30
+            minSdkVersion 22
+        }
+        Prod {
+            dimension "OloPayEnv"
+            targetSdkVersion 30
+            minSdkVersion 22
+        }
+    }
+    namespace 'com.olo.olopay'
+}
+
+ext {
+    PUBLISH_GROUP_ID = 'com.olo.olopay'
+    PUBLISH_VERSION = System.getenv('SDK_PUBLISH_VERSION')
+    PUBLISH_ARTIFACT_ID = 'olo-pay-android-sdk'
+}
+
+apply from: "${rootProject.projectDir}/scripts/publish-module.gradle"
+apply plugin: 'kotlin-android'
+
+tasks.withType(dokkaHtml.getClass()).configureEach {
+    pluginsMapConfiguration.set(
+        ["org.jetbrains.dokka.base.DokkaBase": """{ 
+            "separateInheritedMembers": true, 
+            "customStyleSheets": ["${project.projectDir}/docs/styles/olopay-styles.css"]
+        }"""]
+    )
+}
+
+tasks.withType(dokkaJavadoc.getClass()).configureEach {
+    pluginsMapConfiguration.set(
+        ["org.jetbrains.dokka.base.DokkaBase": """{ 
+            "separateInheritedMembers": true, 
+            "customStyleSheets": ["${project.projectDir}/docs/styles/olopay-styles.css"]
+        }"""]
+    )
+}
+
+dokkaHtml.configure {
+    dokkaSourceSets {
+        named("main") {
+            skipDeprecated.set(true)
+            includeNonPublic.set(false)
+            suppressObviousFunctions.set(true)
+            suppressInheritedMembers.set(true)
+            skipEmptyPackages.set(true)
+            displayName.set("Olo Pay SDK")
+            reportUndocumented.set(true)
+            includes.from(["docs/setup.md"])
+            samples.from(["docs/Changelog.kt"])
+        }
+    }
+}
+
+dependencies {
+    implementation "androidx.core:core-ktx:1.9.0"
+    implementation "androidx.appcompat:appcompat:1.5.1"
+    implementation "com.google.android.material:material:1.7.0"
+    api 'com.stripe:stripe-android:20.16.1'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
+    testImplementation "junit:junit:4.13.2"
+    androidTestImplementation "androidx.test.ext:junit:1.1.4"
+    androidTestImplementation "androidx.test.espresso:espresso-core:3.5.0"
+    androidTestImplementation 'org.mockito:mockito-android:4.9.0'
+    implementation "androidx.core:core-ktx:1.9.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
+}

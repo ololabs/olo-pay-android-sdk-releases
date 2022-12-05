@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <!--
+ Copyright © 2022 Olo Inc. All rights reserved.
+ This software is made available under the Olo Pay SDK License (See LICENSE.md file)
+ -->
+<resources>
+    <attr name="postalCodeEnabled" format="boolean" />
+    <attr name="postalCodeRequired" format="boolean" />
+    <attr name="usZipCodeRequired" format="boolean" />
+    <attr name="displayErrors" format="boolean" />
+
+    <declare-styleable name="PaymentCardDetailsSingleLineView">
+        <attr name="postalCodeEnabled" />
+        <attr name="displayErrors" />
+    </declare-styleable>
+    <declare-styleable name="PaymentCardDetailsMultiLineView">
+        <attr name="postalCodeEnabled" />
+        <attr name="displayErrors" />
+    </declare-styleable>
+</resources>

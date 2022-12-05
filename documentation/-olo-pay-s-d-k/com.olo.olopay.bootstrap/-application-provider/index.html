@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ApplicationProvider</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script><link href="../../../styles/style.css" rel="Stylesheet"><link href="../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../styles/main.css" rel="Stylesheet"><link href="../../../styles/prism.css" rel="Stylesheet"><link href="../../../styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script><script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="../../../scripts/main.js" async="async"></script><script type="text/javascript" src="../../../scripts/prism.js" async="async"></script><link href="../../../styles/olopay-styles.css" rel="Stylesheet">  </head>
+  <body>
+    <div class="navigation-wrapper" id="navigation-wrapper">
+      <div id="leftToggler"><span class="icon-toggler"></span></div>
+      <div class="library-name"><a href="../../../index.html">OloPaySDK</a></div>
+      <div>1.3.0</div>
+      <div class="pull-right d-flex"><button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main"><script type="text/javascript" src="../../../scripts/main.js"></script>
+        <div class="main-content" id="content" pageIds="OloPaySDK::com.olo.olopay.bootstrap/ApplicationProvider///PointingToDeclaration//-374960122">
+          <div class="breadcrumbs"><a href="../../../index.html">OloPaySDK</a>/<a href="../index.html">com.olo.olopay.bootstrap</a>/<a href="index.html">ApplicationProvider</a></div>
+          <div class="cover ">
+            <h1 class="cover"><span>Application</span><wbr></wbr><span><span>Provider</span></span></h1>
+            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="index.html">ApplicationProvider</a> : <span data-unresolved-link="com.olo.olopay.internal.providers/BaseProvider///PointingToDeclaration/">BaseProvider</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Convenience provider class to initialize the Olo Pay SDK without needing to create an Application subclass</p><hr class="divider"><h3 class=""> Usage Details:</h3><p class="paragraph">To initialize the Olo Pay SDK (and perhaps other libraries that need the application context) do the following:</p><ol><li><p class="paragraph">Add the following provider tag to your manifest</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea"> &lt;provider<br>      android:authorities=&quot;your.package.name&quot;<br>      android:name=&quot;com.olo.olopay.bootstrap.ApplicationProvider&quot;<br>      android:exported=&quot;false&quot; /&gt;</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></li><li><p class="paragraph">Call <a href="-companion/listen.html">ApplicationProvider.listen</a></p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea"> val InitializeOloPaySDK by lazy {<br>        ApplicationProvider.listen { application -&gt;<br>            OloPayApiInitializer().setup(application.applicationContext, SetupParameters(false))<br>        }<br>    }<br><br>    class MyActivity : AppCompatActivity() {<br>        init {<br>            InitializeOloPaySDK<br>        }<br>    }</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></li></ol><hr class="spacer"><h4 class=""> Important:</h4><p class="paragraph"><i>This is not the only way to initialize the Olo Pay SDK. See </i><a href="../-application-initializer/index.html"><i>ApplicationInitializer</i></a><i> for an alternative approach as well</i></p></div></div>
+          </div>
+          <div class="tabbedcontent">
+            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Inheritors">Inheritors</button></div>
+            <div class="tabs-section-body">
+              <h2 class="">Types</h2>
+              <div class="table" data-togglable="Types"><a data-name="-7961502%2FClasslikes%2F-374960122" anchor-label="Companion" id="-7961502%2FClasslikes%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="-companion/index.html"><span><span>Companion</span></span></a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-7961502%2FClasslikes%2F-374960122"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Convenience object for Application-related properties and listeners</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Inheritors</h2>
+              <div class="table" data-togglable="Inheritors"><a data-name="1185493775%2FInheritors%2F-374960122" anchor-label="ApplicationInitializer" id="1185493775%2FInheritors%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-application-initializer/index.html">ApplicationInitializer</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1185493775%2FInheritors%2F-374960122"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  </body>
+</html>
+
