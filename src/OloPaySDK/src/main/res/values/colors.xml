@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <!--
+ Copyright © 2022 Olo Inc. All rights reserved.
+ This software is made available under the Olo Pay SDK License (See LICENSE.md file)
+ -->
+<resources>
+    <!--
+        Colors for CardMultiLineWidget error text:
+         https://github.com/stripe/stripe-android/blob/54276bcccbce9f027a9a7d6eb9d72d666318b7eb/payments-core/res/values/colors.xml#L3-L4
+    -->
+    <color name="stripe_error_text_light_theme">@color/olopay_paymentcarddetailsmultilineview_edittext_errorcolor</color>
+    <color name="stripe_error_text_dark_theme">@color/stripe_error_text_light_theme</color>
+
+    <!--
+        Customizable Colors for CardFormView:
+        https://github.com/stripe/stripe-android/blob/54276bcccbce9f027a9a7d6eb9d72d666318b7eb/payments-core/res/values/colors.xml#L28-L34
+    -->
+    <color name="stripe_card_form_view_textinput_color">@color/olopay_paymentcarddetailsform_edittext_textcolor</color>
+    <color name="stripe_card_form_view_textinput_disabled_color">@color/olopay_paymentcarddetailsform_edittext_disabledtextcolor</color>
+    <color name="stripe_card_form_view_background_default">@color/olopay_paymentcarddetailsform_background</color>
+    <color name="stripe_card_form_view_background_disabled">@color/olopay_paymentcarddetailsform_disabledbackground</color>
+    <color name="stripe_card_form_view_form_error">@color/olopay_paymentcarddetailsform_errorcolor</color>
+    <color name="stripe_card_form_view_form_border">@color/olopay_paymentcarddetailsform_bordercolor</color>
+</resources>
