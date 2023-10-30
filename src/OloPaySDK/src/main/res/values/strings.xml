@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <!--
+ Copyright © 2022 Olo Inc. All rights reserved.
+ This software is made available under the Olo Pay SDK License (See LICENSE.md file)
+ -->
+<resources>
+    <!-- Default Error Messages: Define these in your app to provide custom error messaging -->
+    <string name="olopay_default_api_error">There was an error processing your request. Please try again in a few minutes.</string>
+    <string name="olopay_invalid_card_number_error">Your card\'s number is invalid</string>
+    <string name="olopay_empty_card_number_error">Your card\'s number is missing</string>
+    <string name="olopay_unsupported_card_type_error">Your card type is not supported</string>
+    <string name="olopay_invalid_expiration_error">Your card\'s expiration date is invalid</string>
+    <string name="olopay_empty_expiration_error">Your card\'s expiration date is missing</string>
+    <string name="olopay_invalid_cvv_error">Your card\'s security code is invalid</string>
+    <string name="olopay_incomplete_cvv_error">Your card\'s security code is incomplete</string>
+    <string name="olopay_empty_cvv_error">Your card\'s security code is missing</string>
+    <string name="olopay_empty_postal_code_error">Your ZIP/postal code is missing</string>
+    <string name="olopay_invalid_postal_code_error">Your ZIP/postal code is invalid</string>
+    <string name="olopay_invalid_card_details">Your card details are invalid</string>
+    <string name="olopay_setup_not_called_error">The Olo Pay SDK was not initialized. Please call IOloPayApiInitializer.setup()</string>
+    <string name="olopay_invalid_cvv_params_type">Params must be of type ICvvTokenParams</string>
+
+    <!-- Default values for UI components -->
+    <string name="olopay_cvv_text_hint">CVV</string>
+</resources>
