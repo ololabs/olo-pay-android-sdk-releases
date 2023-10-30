@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
- <!--
- Copyright © 2022 Olo Inc. All rights reserved.
- This software is made available under the Olo Pay SDK License (See LICENSE.md file)
- -->
-<resources>
-    <string name="dev_publishable_key_url">https://static.olocdn.net/web-client/olo-pay/keys/dev.json</string>
-    <string name="prod_publishable_key_url">https://static.olocdn.net/web-client/olo-pay/keys/prod.json</string>
-</resources>
