@@ -1,0 +1,219 @@
+<html>
+    <head>
+        <title>Olo Pay SDK Changelog</title>
+        <link href="styles/style.css" rel="Stylesheet">
+        <link href="styles/jetbrains-mono.css" rel="Stylesheet">
+        <link href="styles/main.css" rel="Stylesheet">
+        <link href="styles/prism.css" rel="Stylesheet">
+        <link href="styles/logo-styles.css" rel="Stylesheet">
+
+    </head>
+    <body style="margin:10px;padding:10px">
+        <h1>Olo Pay Android SDK Changelog</h1>
+        <a href="index.html"><strong><i>[Back to Documentation]</i></strong></a>
+        <hr>
+            
+
+        <h3>v3.0.0 (Oct 27, 2023)</h3>
+        <h4>Breaking Changes</h4>
+        <ul>
+            <li>Changed <b>ALL</b> references of <code>CVC</code> to <code>CVV</code></li>
+            <li><code>CardInputListener</code>: Changed method signature of <code>onFocusChange()</code></li>
+            <li><code>CardErrorType</code>: Removed <code>incorrectNumber</code> and merged its use case with <code>invalidNumber</code></li>
+            <li><code>CardErrorType</code>: Removed <code>incorrectZip</code> and merged its use case with <code>invalidZip</code></li>
+            <li><code>CardErrorType</code>: Removed <code>incorrectCVC</code> and merged its use case with <code>invalidCVV</code></li>
+        </ul>
+
+        <h4>Bug Fixes</h4>
+        <ul>
+            <li><code>PaymentCardDetailsSingleLineView</code>: Fix issue with <code>clearFields()</code> method causing the following controls to have incorrect state</li>
+            <li><code>PaymentCardDetailsMultiLineView</code>: Fix issue with <code>clearFields()</code> method causing the following controls to have incorrect state</li>
+            <li><code>PaymentCardDetailsForm</code>: Fix issue with <code>clearFields()</code> method causing the following controls to have incorrect state</li>
+        </ul>
+
+        <h4>Updates</h4>
+        <ul>
+            <li>
+                Added support for CVV tokenization
+                <ul>
+                    <li>See <code>PaymentCardCvvView</code> control</li>
+                    <li>See <code>OloPayAPI.createCvvUpdateToken()</code></li>
+                </ul>
+            </li>
+            <li><code>PaymentCardDetailsSingleLineView</code>: Improved focus change handling</li>
+            <li><code>PaymentCardDetailsSingleLineView</code>: Improved logic for displaying error messages</li>
+            <li><code>PaymentCardDetailsMultiLineView</code>: Improved focus change handling</li>
+            <li><code>PaymentCardDetailsMultiLineView</code>: Improved logic for displaying error messages</li>
+            <li><code>CardInputListener</code>: Deprecated <code>onFieldComplete()</code></li>
+            <li><code>CardInputListener</code>: Added <code>onValidStateChanged()</code></li>
+            <li><code>FormValidCallback</code>: Added <code>onValidStateChanged()</code></li>
+            <li><code>IPaymentMethod</code>: Added <code>environment</code> property</li>
+            <li>Test Harness Improvements: New tabbed interface for each main aspect of the Olo pay SDK: Credit Cards, Google Pay, CVV Tokenization</li>
+        </ul>
+
+        <h4>Dependency Updates</h4>
+        <ul>
+            <li>Updated to <code>com.android.tools.build:gradle:7.4.2</code></li>
+        </ul>
+        <hr>
+        
+        <h3>v2.0.1 (July 14, 2023)</h3>
+        <h4>Updates</h4>
+        <ul>
+            <li><code>GooglePayContext:</code>General improvements to the Google Pay flow (same public facing API)</li>
+        </ul>
+        
+        <h4>Dependency Updates</h4>
+        <ul>
+            <li>Added <code>androidx.navigation:navigation-fragment-ktx:2.6.0</code></li>
+            <li>Added <code>androidx.navigation:navigation-ui-ktx:2.6.0</code></li>
+            <li>Added <code>androidx.activity:activity-ktx:1.7.2</code></li>
+            <li>Added <code>androidx.lifecycle:lifecycle-livedata-ktx:2.6.1</code></li>
+            <li>Added <code>com.google.android.gms:play-services-wallet:19.1.0</code></li>
+            <li>Added <code>androidx.lifecycle:lifecycle-extensions:2.2.0</code></li>
+        </ul>
+
+        <hr>
+        <h3>v2.0.0 (Jun 16, 2023)</h3>
+        <h4>Breaking Changes</h4>
+        <ul>
+            <li>Updated minimum SDK to API 23</li>
+        </ul>
+        <h4>Bug Fixes</h4>
+        <ul>
+            <li><code>PaymentCardDetailsSingleLineView:</code> Fixed issue preventing error messages from being displayed for unsupported card brands</li>
+            <li><code>PaymentCardDetailsMultiLineView:</code> Fixed issue preventing error messages from being displayed for unsupported card brands</li>
+        </ul>
+        <h4>Updates</h4>
+        <ul>
+            <li><code>PaymentCardDetailsSingleLineView:</code> Added methods to customize the background, text and cursor colors, and fonts</li>
+            <li><code>PaymentCardDetailsSingleLineView:</code> Added hint text support for all card fields (both in code and xml)</li>
+            <li><code>PaymentCardDetailsMultiLineView:</code> Added methods to customize the background, text and cursor colors, and fonts</li>
+            <li><code>PaymentCardDetailsMultiLineView:</code> Added hint text support for all card fields (both in code and xml)</li>
+            <li><code>PaymentCardDetailsForm:</code> Added methods to customize the background, text and cursor colors, and fonts</li>
+            <li><code>PaymentCardDetailsForm:</code> Added hint text support for all card fields (both in code and xml)</li>
+            <li>Added <code>CardBrand.Unsupported</code> enum type</li>
+            <li>Improved caching mechanism when switching between Test and Production environments during development</li>
+        </ul>
+        <h4>Dependency Updates</h4>
+        <ul>
+            <li>Updated to Kotlin v1.8.0</li>
+            <li>Updated to <code>androidx.core:core-ktx:1.10.1</code></li>
+            <li>Updated to <code>androidx.appcompat:appcompat:1.6.1</code></li>
+            <li>Updated to <code>com.google.android.material:material:1.9.0</code></li>
+            <li>Updated to <code>com.stripe:stripe-android:20.25.5</code></li>
+        </ul>
+
+        <hr>
+        <h3>v1.3.0 (Dec 5, 2022)</h3>
+        <h4>Breaking Changes</h4>
+        <ul>
+            <li><code>PaymentCardDetailsSingleLineView:</code> Removed <code>postalCodeRequired</code> and <code>usZipCodeRequired</code> properties</li>
+            <li><code>PaymentCardDetailsMultiLineView:</code> Removed <code>postalCodeRequired</code> and <code>usZipCodeRequired</code> properties</li>
+        </ul>
+        <h4>Updates</h4>
+        <ul>
+            <li><code>PaymentCardDetailsSingleLineView:</code> Added US and CA postal code validation</li>
+            <li><code>PaymentCardDetailsMultiLineView:</code> Added US and CA postal code validation</li>
+        </ul>
+        <h4>Dependency Updates</h4>
+        <ul>
+            <li>Updated to Kotlin v1.7.22</li>
+            <li>Updated to <code>com.stripe:stripe-android:20.16.1</code></li>
+            <li>Updated to <code>com.google.android.material:material:1.7.0</code></li>
+        </ul>
+
+        <hr>
+        <h3>v1.2.2 (Sep 27, 2022)</h3>
+        <h4>Dependency Updates</h4>
+        <ul>
+            <li>Update compile and target SDK version to 33</li>
+            <li>Updated to Kotlin v1.7.10</li>
+            <li>Updated to <code>com.stripe:stripe-android:20.13.0</code></li>
+            <li>Updated to <code>androidx.core:core-ktx:1.9.0</code></li>
+            <li>Updated to <code>org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4</code></li>
+            <li>Updated to <code>androidx.appcompat:appcompat:1.5.1</code></li>
+            <li>Updated to <code>com.google.android.material:material:1.6.1</code></li>
+        </ul>
+
+        <hr>
+        <h3>v1.2.1 (May 27, 2022)</h3>
+        <h4>Updates</h4>
+        <ul>
+            <li>Added Maven support</li>
+        </ul>
+        <h4>Dependency Updates</h4>
+        <ul>
+            <li>Updated to <code>com.stripe:stripe-android:20.4.0</code></li>
+            <li>Updated to <code>com.google.android.material:material:1.6.0</code></li>
+        </ul>
+
+        <hr>
+        <h3>v1.2.0 (May 18, 2022)</h3>
+        <h4>Breaking Changes</h4>
+        <ul>
+            <li><code>PaymentCardDetailsSingleLineView.hasErrorMessage</code> has been changed from a property to a method</li>
+            <li><code>PaymentCardDetailsMultiLineView.hasErrorMessage</code> has been changed from a property to a method</li>
+            <li><code>PaymentCardDetailsSingleLineView.errorMessage</code> has been replaced with <code>getErrorMessage()</code></li>
+            <li><code>PaymentCardDetailsMultiLineView.errorMessage</code> has been replaced with <code>getErrorMessage()</code></li>
+        </ul>
+        <h4>Bug Fixes</h4>
+        <ul>
+            <li><code>PaymentCardDetailsSingleLineView:</code> Fix layout refresh issue when using the SDK in a React Native app</li>
+            <li>Add missing Google Pay configuration parameters to Java Test Harness sample code</li>
+            <li>Fix test harness compilation issues due to missing gradle scripts</li>
+            <li>Fix code example in <code>ApplicationInitializer</code> docs</li>
+        </ul>
+        <h4>Updates</h4>
+        <ul>
+            <li>Error message now displays for <code>PaymentCardDetailsSingleLineView</code> and <code>PaymentCardDetailsMultiLineView</code> if <code>paymentMethodParams</code> property is accessed and card details are invalid</li>
+            <li><code>PaymentCardDetailsSingleLineView.displayErrors</code> can now be set in XML</li>
+            <li><code>PaymentCardDetailsMultiLineView.displayErrors</code> can now be set in XML</li>
+        </ul>
+
+        <hr>
+        <h3>v1.1.0 (Feb 28, 2022)</h3>
+        <h4>Breaking Changes</h4>
+        <ul>
+            <li>Renamed <code>OloPay.PaymentCardDetailsMultiLineView.TextInputLayout.ErrorTextAppearance</code> style to <code>"OloPay.PaymentCardDetailsMultiLineView.ErrorText.TextAppearance"</code></li>
+        </ul>
+        <h4>Updates</h4>
+        <ul>
+            <li><code>PaymentCardDetailsSingleLineView:</code> Improved US postal code validation</li>
+            <li><code>PaymentCardDetailsMultiLineView:</code> Improved US postal code validation</li>
+            <li><code>PaymentCardDetailsMultiLineView:</code> Add custom error message support</li>
+        </ul>
+        <h4>Dependency Updates</h4>
+        <ul>
+            <li>Updated to <code>com.stripe:stripe-android:19.2.0</code></li>
+        </ul>
+
+        <hr>
+        <h3>v1.0.1 (Dec 20, 2021)</h3>
+        <h4>Bug Fixes</h4>
+            <ul>
+                <li>Fixed bug preventing <code>ApplicationInitializer.initialize()</code> from being called</li>
+                <li>Fixed bug when creating input controls in code rather than inflating via XML layouts</li>
+                <li><code>PaymentCardDetailsSingleLineView:</code> Added <code>postalCodeEnabled</code>, <code>postalCodeRequired</code>, and <code>usZipCodeRequired</code> properties</li>
+                <li><code>PaymentCardDetailsMultiLineView:</code> Added <code>postalCodeEnabled</code>, <code>postalCodeRequired</code>, and <code>usZipCodeRequired</code> properties</li>
+                <li>Fixed a bug that incorrectly mapped <code>GooglePayErrorType.DeveloperError</code> as <code>GooglePayErrorType.NetworkError</code> and vice-versa</li>
+            </ul>
+        <h4>Updates</h4>
+        <ul>
+            <li>Added <code>OloPayEnvironment</code> enum to support Test and Production environments (set via <code>SetupParameters.environment</code>)</li>
+            <li><code>OloPayApiInitializer:</code> Added consistent error handling between java/kotlin flows</li>
+            <li>Callbacks in the <code>GooglePayContext</code> constructor are now optional and can also be set via properties</li>
+            <li>Added <code>IGooglePayContext.readyCallback</code> and <code>IGooglePayContext.resultCallback</code></li>
+        </ul>
+        <h4>Dependency Updates</h4>
+        <ul>
+            <li>Changed Compile SDK Version from 30 to 31</li>
+        </ul>
+
+        <hr>
+        <h3>v1.0.0 (Oct 25, 2021)</h3>
+        <ul>
+            <li>Initial release</li>
+        </ul>
+    </body>
+</html>
