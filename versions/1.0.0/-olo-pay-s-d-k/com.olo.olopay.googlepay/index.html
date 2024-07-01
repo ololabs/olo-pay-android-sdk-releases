@@ -1,0 +1,176 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>com.olo.olopay.googlepay</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script><script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script><link href="../../styles/style.css" rel="Stylesheet"><link href="../../styles/logo-styles.css" rel="Stylesheet"><link href="../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../styles/main.css" rel="Stylesheet"><script type="text/javascript" src="../../scripts/clipboard.js" async="async"></script><script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="../../scripts/main.js" async="async"></script><link href="../../styles/olopay-styles.css" rel="Stylesheet">  </head>
+  <body>
+    <div id="container">
+      <div id="leftColumn"><a href="../../index.html">
+          <div id="logo"></div>
+        </a>
+        <div id="paneSearch"></div>
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <div id="leftToggler"><span class="icon-toggler"></span></div>
+<script type="text/javascript" src="../../scripts/main.js"></script>        <div class="main-content" id="content" pageIds="OloPaySDK::com.olo.olopay.googlepay////PointingToDeclaration//-374960122">
+          <div class="navigation-wrapper" id="navigation-wrapper">
+            <div class="breadcrumbs"><a href="../../index.html">OloPaySDK</a>/<a href="index.html">com.olo.olopay.googlepay</a></div>
+            <div class="pull-right d-flex">
+              <div id="searchBar"></div>
+            </div>
+          </div>
+          <div class="cover ">
+            <h1 class="cover"><span><span>Package</span></span> <span>com.</span><wbr></wbr><span>olo.</span><wbr></wbr><span>olopay.</span><wbr></wbr><span>googlepay</span></h1>
+            <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><p class="paragraph">Classes for adding Google Pay support to your app. </p><hr class="spacer"><h2 class=""> Setting up Google Pay</h2><ol><li><p class="paragraph">Enable Google Pay in your app manifest in the application tag</p><div class="sample-container"><code class="" theme="idea"><pre> &lt;application&gt;<br>        ...<br>        &lt;meta-data<br>            android:name=&quot;com.google.android.gms.wallet.api.enabled&quot;<br>            android:value=&quot;true&quot; /&gt;<br>    &lt;/application&gt;</pre></code></div></li><li><p class="paragraph">Implement Google Pay: Refer to <code>GooglePayContext</code> SDK documentation for implementation details</p></li><li><p class="paragraph">Build and test your app with the Google Pay <code>Test</code> environment</p></li><li><p class="paragraph">Reach out to Google Support and send the APK built with the <code>Test</code> environment when requested</p></li><ul><li><p class="paragraph">Google assesses the app and provides feedback if needed</p></li><li><p class="paragraph">Google provides instructions on how to agree to their Terms of Service and ensure production access is granted</p></li></ul><li><p class="paragraph">Send your final production APK using the Google Pay <code>Production</code> environment to Google for a real-world test which includes a few transactions</p></li><li><p class="paragraph">If all tests pass, Google clears you to publish the APK</p></li><li><p class="paragraph">Notify Google when your APK is 100% visible to users</p></li></ol></div></div>
+          </div>
+          <div class="tabbedcontent">
+            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button></div>
+            <div class="tabs-section-body">
+              <h2 class="">Types</h2>
+              <div class="table" data-togglable="Types"><a data-name="-1887470944%2FClasslikes%2F-374960122" anchor-label="Config" id="-1887470944%2FClasslikes%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="-config/index.html"><span><span>Config</span></span></a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1887470944%2FClasslikes%2F-374960122"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace">data class <a href="-config/index.html">Config</a> <span>@<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html">JvmOverloads</a> </span>constructor(environment: <a href="-environment/index.html">Environment</a>, companyName: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, companyCountryCode: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, existingPaymentMethodRequired: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>, emailRequired: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>, phoneNumberRequired: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>, addressFormat: <a href="-config/-address-format/index.html">Config.AddressFormat</a>)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<div class="brief "><p class="paragraph">Google Pay Configuration class</p></div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-445254483%2FClasslikes%2F-374960122" anchor-label="Environment" id="-445254483%2FClasslikes%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="-environment/index.html"><span><span>Environment</span></span></a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-445254483%2FClasslikes%2F-374960122"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace">enum <a href="-environment/index.html">Environment</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a>&lt;<a href="-environment/index.html">Environment</a>&gt; <span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<div class="brief "><p class="paragraph">Enum for determining what environment Google Pay will use</p></div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-142827678%2FClasslikes%2F-374960122" anchor-label="GooglePayContext" id="-142827678%2FClasslikes%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="-google-pay-context/index.html"><span>Google</span><wbr></wbr><span>Pay</span><wbr></wbr><span><span>Context</span></span></a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-142827678%2FClasslikes%2F-374960122"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace">class <a href="-google-pay-context/index.html">GooglePayContext</a> : <a href="-i-google-pay-context/index.html">IGooglePayContext</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<div class="brief "><p class="paragraph">A drop-in class that presents a Google Pay sheet to collect a customer's payment details. When successful, will return an <a href="../com.olo.olopay.data/-i-payment-method/index.html">IPaymentMethod</a> via <a href="-result/-completed/payment-method.html">Result.Completed.paymentMethod</a></p></div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1138606863%2FClasslikes%2F-374960122" anchor-label="GooglePayErrorType" id="1138606863%2FClasslikes%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="-google-pay-error-type/index.html"><span>Google</span><wbr></wbr><span>Pay</span><wbr></wbr><span>Error</span><wbr></wbr><span><span>Type</span></span></a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1138606863%2FClasslikes%2F-374960122"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace">enum <a href="-google-pay-error-type/index.html">GooglePayErrorType</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a>&lt;<a href="-google-pay-error-type/index.html">GooglePayErrorType</a>&gt; <span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<div class="brief "><p class="paragraph">An enum representing types of Google Pay Errors</p></div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1791816009%2FClasslikes%2F-374960122" anchor-label="IGooglePayContext" id="-1791816009%2FClasslikes%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="-i-google-pay-context/index.html"><span>IGoogle</span><wbr></wbr><span>Pay</span><wbr></wbr><span><span>Context</span></span></a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1791816009%2FClasslikes%2F-374960122"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace">interface <a href="-i-google-pay-context/index.html">IGooglePayContext</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<div class="brief "><p class="paragraph">Interface for mocking/testing purposes</p></div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="385620376%2FClasslikes%2F-374960122" anchor-label="ReadyCallback" id="385620376%2FClasslikes%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="-ready-callback/index.html"><span>Ready</span><wbr></wbr><span><span>Callback</span></span></a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="385620376%2FClasslikes%2F-374960122"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace">fun interface <a href="-ready-callback/index.html">ReadyCallback</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<div class="brief "><p class="paragraph">Callback to know when Google Pay is ready</p></div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1898959397%2FClasslikes%2F-374960122" anchor-label="Result" id="1898959397%2FClasslikes%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="-result/index.html"><span><span>Result</span></span></a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1898959397%2FClasslikes%2F-374960122"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace">sealed class <a href="-result/index.html">Result</a> : <a href="https://developer.android.com/reference/kotlin/android/os/Parcelable.html">Parcelable</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<div class="brief "><p class="paragraph">Result class for generating payment methods via Google Pay</p></div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="864183648%2FClasslikes%2F-374960122" anchor-label="ResultCallback" id="864183648%2FClasslikes%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="-result-callback/index.html"><span>Result</span><wbr></wbr><span><span>Callback</span></span></a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="864183648%2FClasslikes%2F-374960122"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace">fun interface <a href="-result-callback/index.html">ResultCallback</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<div class="brief "><p class="paragraph">Callback for Google Pay results</p></div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content"></a></span><span>© 2021 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  </body>
+</html>
+

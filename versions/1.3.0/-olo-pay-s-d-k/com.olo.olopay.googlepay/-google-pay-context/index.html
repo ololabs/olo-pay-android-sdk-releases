@@ -1,0 +1,126 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>GooglePayContext</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script><link href="../../../styles/style.css" rel="Stylesheet"><link href="../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../styles/main.css" rel="Stylesheet"><link href="../../../styles/prism.css" rel="Stylesheet"><link href="../../../styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script><script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="../../../scripts/main.js" async="async"></script><script type="text/javascript" src="../../../scripts/prism.js" async="async"></script><link href="../../../styles/olopay-styles.css" rel="Stylesheet">  </head>
+  <body>
+    <div class="navigation-wrapper" id="navigation-wrapper">
+      <div id="leftToggler"><span class="icon-toggler"></span></div>
+      <div class="library-name"><a href="../../../index.html">OloPaySDK</a></div>
+      <div>1.3.0</div>
+      <div class="pull-right d-flex"><button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main"><script type="text/javascript" src="../../../scripts/main.js"></script>
+        <div class="main-content" id="content" pageIds="OloPaySDK::com.olo.olopay.googlepay/GooglePayContext///PointingToDeclaration//-374960122">
+          <div class="breadcrumbs"><a href="../../../index.html">OloPaySDK</a>/<a href="../index.html">com.olo.olopay.googlepay</a>/<a href="index.html">GooglePayContext</a></div>
+          <div class="cover ">
+            <h1 class="cover"><span>Google</span><wbr></wbr><span>Pay</span><wbr></wbr><span><span>Context</span></span></h1>
+            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">GooglePayContext</a> : <a href="../-i-google-pay-context/index.html">IGooglePayContext</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">A drop-in class that presents a Google Pay sheet to collect a customer's payment details. When successful, will return an <a href="../../com.olo.olopay.data/-i-payment-method/index.html">IPaymentMethod</a> via <a href="../-result/-completed/payment-method.html">Result.Completed.paymentMethod</a></p></div></div>
+          </div>
+          <div class="tabbedcontent">
+            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+            <div class="tabs-section-body">
+              <h2 class="tabbedcontent">Constructors</h2>
+              <div class="table" data-togglable="Constructors"><a data-name="-39258049%2FConstructors%2F-374960122" anchor-label="GooglePayContext" id="-39258049%2FConstructors%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+                  <div class="main-subrow keyValue TabbedContent">
+                    <div class=""><span class="inline-flex"><a href="-google-pay-context.html">GooglePayContext</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-39258049%2FConstructors%2F-374960122"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation">JvmOverloads</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="-google-pay-context.html"><span class="token function">GooglePayContext</span></a><span class="token punctuation">(</span>activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/activity/ComponentActivity.html">ComponentActivity</a><span class="token punctuation">, </span>readyCallback<span class="token operator">: </span><a href="../-ready-callback/index.html">ReadyCallback</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span>resultCallback<span class="token operator">: </span><a href="../-result-callback/index.html">ResultCallback</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span>merchantName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span>merchantCountryCode<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Constructor for using this class from an Activity.</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1626178187%2FConstructors%2F-374960122" anchor-label="GooglePayContext" id="1626178187%2FConstructors%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+                  <div class="main-subrow keyValue TabbedContent">
+                    <div class=""><span class="inline-flex"><a href="-google-pay-context.html">GooglePayContext</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1626178187%2FConstructors%2F-374960122"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation">JvmOverloads</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="-google-pay-context.html"><span class="token function">GooglePayContext</span></a><span class="token punctuation">(</span>fragment<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/fragment/app/Fragment.html">Fragment</a><span class="token punctuation">, </span>readyCallback<span class="token operator">: </span><a href="../-ready-callback/index.html">ReadyCallback</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span>resultCallback<span class="token operator">: </span><a href="../-result-callback/index.html">ResultCallback</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span>merchantName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span>merchantCountryCode<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Constructor for using this class from a <a href="https://developer.android.com/reference/kotlin/androidx/fragment/app/Fragment.html">Fragment</a>.</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Properties</h2>
+              <div class="table" data-togglable="Properties"><a data-name="-1148414044%2FProperties%2F-374960122" anchor-label="isReady" id="-1148414044%2FProperties%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="is-ready.html">isReady</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1148414044%2FProperties%2F-374960122"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><a data-name="-1148414044%2FProperties%2F-374960122" anchor-label="isReady" id="-1148414044%2FProperties%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="is-ready.html">isReady</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1148414044%2FProperties%2F-374960122" anchor-label="isReady" id="-1148414044%2FProperties%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a><p class="paragraph">True if Google Pay is available and ready to present</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-2067147243%2FProperties%2F-374960122" anchor-label="readyCallback" id="-2067147243%2FProperties%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="ready-callback.html">readyCallback</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2067147243%2FProperties%2F-374960122"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><a data-name="-2067147243%2FProperties%2F-374960122" anchor-label="readyCallback" id="-2067147243%2FProperties%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">var </span><a href="ready-callback.html">readyCallback</a><span class="token operator">: </span><a href="../-ready-callback/index.html">ReadyCallback</a><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-2067147243%2FProperties%2F-374960122" anchor-label="readyCallback" id="-2067147243%2FProperties%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a><p class="paragraph">Optional callback to be notified when Google Pay is ready. Alternatively, you can check if Google Pay is ready by checking the <a href="is-ready.html">isReady</a> property</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-509795813%2FProperties%2F-374960122" anchor-label="resultCallback" id="-509795813%2FProperties%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="result-callback.html">resultCallback</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-509795813%2FProperties%2F-374960122"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><a data-name="-509795813%2FProperties%2F-374960122" anchor-label="resultCallback" id="-509795813%2FProperties%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">var </span><a href="result-callback.html">resultCallback</a><span class="token operator">: </span><a href="../-result-callback/index.html">ResultCallback</a><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-509795813%2FProperties%2F-374960122" anchor-label="resultCallback" id="-509795813%2FProperties%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a><p class="paragraph">Callback to get the results of the Google Pay flow. If this isn't set there is no way to get the resulting payment method. It can be passed in to the constructor or manually set after creation, but must be set prior to calling <a href="present.html">GooglePayContext.present</a></p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Functions</h2>
+              <div class="table" data-togglable="Functions"><a data-name="-221156654%2FFunctions%2F-374960122" anchor-label="present" id="-221156654%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="present.html"><span><span>present</span></span></a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-221156654%2FFunctions%2F-374960122"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="present.html"><span class="token function">present</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="present.html"><span class="token function">present</span></a><span class="token punctuation">(</span>currencyCode<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="present.html"><span class="token function">present</span></a><span class="token punctuation">(</span>currencyCode<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span>amount<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="present.html"><span class="token function">present</span></a><span class="token punctuation">(</span>currencyCode<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span>amount<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span>transactionId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Present the Google Pay UI. If <a href="is-ready.html">isReady</a> is <code class="lang-kotlin">false</code> then this method is a no-op</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  </body>
+</html>
+

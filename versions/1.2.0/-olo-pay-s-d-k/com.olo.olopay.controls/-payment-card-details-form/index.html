@@ -1,0 +1,129 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>PaymentCardDetailsForm</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script><link href="../../../styles/style.css" rel="Stylesheet"><link href="../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../styles/main.css" rel="Stylesheet"><link href="../../../styles/prism.css" rel="Stylesheet"><link href="../../../styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script><script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="../../../scripts/main.js" async="async"></script><script type="text/javascript" src="../../../scripts/prism.js" async="async"></script><link href="../../../styles/olopay-styles.css" rel="Stylesheet">  </head>
+  <body>
+    <div class="navigation-wrapper" id="navigation-wrapper">
+      <div id="leftToggler"><span class="icon-toggler"></span></div>
+      <div class="library-name"><a href="../../../index.html">OloPaySDK</a></div>
+      <div>1.2.0</div>
+      <div class="pull-right d-flex"><button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main"><script type="text/javascript" src="../../../scripts/main.js"></script>
+        <div class="main-content" id="content" pageIds="OloPaySDK::com.olo.olopay.controls/PaymentCardDetailsForm///PointingToDeclaration//-374960122">
+          <div class="breadcrumbs"><a href="../../../index.html">OloPaySDK</a>/<a href="../index.html">com.olo.olopay.controls</a>/<a href="index.html">PaymentCardDetailsForm</a></div>
+          <div class="cover ">
+            <h1 class="cover"><span>Payment</span><wbr></wbr><span>Card</span><wbr></wbr><span>Details</span><wbr></wbr><span><span>Form</span></span></h1>
+            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">PaymentCardDetailsForm</a> <span><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation">JvmOverloads</span></a> </span><span class="token keyword">constructor</span><span class="token punctuation">(</span>context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span>attrs<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/util/AttributeSet.html">AttributeSet</a><span class="token operator">?</span><span class="token punctuation">, </span>defStyleAttr<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">)</span> : <span data-unresolved-link="androidx.constraintlayout.widget/ConstraintLayout///PointingToDeclaration/">ConstraintLayout</span>, <span data-unresolved-link="com.stripe.android.view/CardValidCallback///PointingToDeclaration/">CardValidCallback</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Convenience multi-field form for collecting card details from a user. Card fields are separated into multiple input fields, and the control has a &quot;card&quot; style background.</p><hr class="spacer"><h4 class=""> Important:</h4><p class="paragraph"><i>User-entered card details are intentionally restricted for PCI compliance</i></p><hr class="divider"><h2 class=""> Styling/Branding</h2><p class="paragraph">This class can be styled by overriding the following color resource values:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">olopay_paymentcarddetailsform_edittext_textcolor<br>olopay_paymentcarddetailsform_edittext_disabledtextcolor<br>olopay_paymentcarddetailsform_background<br>olopay_paymentcarddetailsform_disabledbackground<br>olopay_paymentcarddetailsform_errorcolor<br>olopay_paymentcarddetailsform_bordercolor</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><hr class="spacer">
+In addition, since this form uses an instance of [PaymentCardDetailsMultiLineView] under
+the hood, many of the fields can be styled by following style documentation for
+[PaymentCardDetailsMultiLineView].<p class="paragraph">Note that values specifically called out here will take precedence over similar values for customizing the same attributes on <a href="../-payment-card-details-multi-line-view/index.html">PaymentCardDetailsMultiLineView</a>. For example, <code class="lang-kotlin">olopay_paymentcarddetailsmultilineview_edittext_textcolor</code> won't have an effect on this form because of <code class="lang-kotlin">olopay_paymentcarddetailsform_edittext_textcolor</code></p></div></div>
+          </div>
+          <div class="tabbedcontent">
+            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+            <div class="tabs-section-body">
+              <h2 class="tabbedcontent">Constructors</h2>
+              <div class="table" data-togglable="Constructors"><a data-name="-536861063%2FConstructors%2F-374960122" anchor-label="PaymentCardDetailsForm" id="-536861063%2FConstructors%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+                  <div class="main-subrow keyValue TabbedContent">
+                    <div class=""><span class="inline-flex"><a href="-payment-card-details-form.html">PaymentCardDetailsForm</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-536861063%2FConstructors%2F-374960122"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation">JvmOverloads</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="-payment-card-details-form.html"><span class="token function">PaymentCardDetailsForm</span></a><span class="token punctuation">(</span>context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span>attrs<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/util/AttributeSet.html">AttributeSet</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span>defStyleAttr<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Creates a new instance of <a href="index.html">PaymentCardDetailsForm</a></p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Properties</h2>
+              <div class="table" data-togglable="Properties"><a data-name="-711183659%2FProperties%2F-374960122" anchor-label="formValidCallback" id="-711183659%2FProperties%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="form-valid-callback.html">formValidCallback</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-711183659%2FProperties%2F-374960122"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><a data-name="-711183659%2FProperties%2F-374960122" anchor-label="formValidCallback" id="-711183659%2FProperties%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="form-valid-callback.html">formValidCallback</a><span class="token operator">: </span><a href="../../com.olo.olopay.controls.callbacks/-form-valid-callback/index.html">FormValidCallback</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-711183659%2FProperties%2F-374960122" anchor-label="formValidCallback" id="-711183659%2FProperties%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a><p class="paragraph">Callback to be notified when the card transitions to valid and invalid states</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1700117440%2FProperties%2F-374960122" anchor-label="isValid" id="1700117440%2FProperties%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="is-valid.html">isValid</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1700117440%2FProperties%2F-374960122"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><a data-name="1700117440%2FProperties%2F-374960122" anchor-label="isValid" id="1700117440%2FProperties%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="is-valid.html">isValid</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1700117440%2FProperties%2F-374960122" anchor-label="isValid" id="1700117440%2FProperties%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a><p class="paragraph"><code class="lang-kotlin">true</code> if all fields are complete and valid, otherwise <code class="lang-kotlin">false</code></p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1091746469%2FProperties%2F-374960122" anchor-label="paymentMethodParams" id="1091746469%2FProperties%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="payment-method-params.html">paymentMethodParams</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1091746469%2FProperties%2F-374960122"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><a data-name="1091746469%2FProperties%2F-374960122" anchor-label="paymentMethodParams" id="1091746469%2FProperties%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="payment-method-params.html">paymentMethodParams</a><span class="token operator">: </span><a href="../../com.olo.olopay.data/-i-payment-method-params/index.html">IPaymentMethodParams</a><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1091746469%2FProperties%2F-374960122" anchor-label="paymentMethodParams" id="1091746469%2FProperties%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a><p class="paragraph">Get an <a href="../../com.olo.olopay.data/-i-payment-method-params/index.html">IPaymentMethodParams</a> instance that can be used to create an <a href="../../com.olo.olopay.data/-i-payment-method/index.html">IPaymentMethod</a> instance. If the form is not valid this will return null.</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Functions</h2>
+              <div class="table" data-togglable="Functions"><a data-name="916153435%2FFunctions%2F-374960122" anchor-label="isEnabled" id="916153435%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="is-enabled.html"><span>is</span><wbr></wbr><span><span>Enabled</span></span></a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="916153435%2FFunctions%2F-374960122"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="is-enabled.html"><span class="token function">isEnabled</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">True if the form is enabled and can accept user input, false otherwise</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1925924558%2FFunctions%2F-374960122" anchor-label="setEnabled" id="1925924558%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="set-enabled.html"><span>set</span><wbr></wbr><span><span>Enabled</span></span></a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1925924558%2FFunctions%2F-374960122"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="set-enabled.html"><span class="token function">setEnabled</span></a><span class="token punctuation">(</span>enabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Enables or disables the control</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  </body>
+</html>
+
