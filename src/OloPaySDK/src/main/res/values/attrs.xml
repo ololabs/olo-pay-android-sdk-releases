@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <!--
+ Copyright © 2022 Olo Inc. All rights reserved.
+ This software is made available under the Olo Pay SDK License (See LICENSE.md file)
+ -->
+<resources>
+    <!-- Functionality Attributes -->
+    <attr name="cardNumberHint" format="string" />
+    <attr name="expirationHint" format="string" />
+    <attr name="cvvHint" format="string" />
+    <attr name="postalCodeHint" format="string" />
+    <attr name="focusedCardNumberHint" format="string" />
+    <attr name="focusedExpirationHint" format="string" />
+    <attr name="focusedCvvHint" format="string" />
+    <attr name="focusedPostalCodeHint" format="string" />
+    <attr name="postalCodeEnabled" format="boolean" />
+    <attr name="displayErrors" format="boolean" />
+
+    <!-- Card Background/Padding Attributes -->
+    <attr name="cardBackground" format="reference" />
+    <attr name="cardBackgroundColor" format="color|reference" />
+    <attr name="cardBorderColor" format="color|reference" />
+    <attr name="cardBorderWidth" format="dimension|reference" />
+    <attr name="cardBorderRadius" format="dimension|reference" />
+    <attr name="cardStartPadding" format="dimension|reference" />
+    <attr name="cardEndPadding" format="dimension|reference" />
+    <attr name="cardTopPadding" format="dimension|reference" />
+    <attr name="cardBottomPadding" format="dimension|reference" />
+    <attr name="cardElevation" format="dimension|reference" />
+    <attr name="verticalSpacing" format="dimension|reference" />
+    <attr name="fieldDividerColor" format="color|reference" />
+    <attr name="fieldDividerWidth" format="dimension|reference" />
+    <attr name="fieldUnderlineColor" format="color|reference" />
+    <attr name="focusedFieldUnderlineColor" format="color|reference" />
+
+    <!-- Cvv Background/Padding Attributes -->
+    <attr name="cvvBackground" format="reference" />
+    <attr name="cvvBackgroundColor" format="color|reference" />
+    <attr name="cvvBorderColor" format="color|reference" />
+    <attr name="cvvBorderWidth" format="dimension|reference" />
+    <attr name="cvvBorderRadius" format="dimension|reference" />
+    <attr name="cvvStartPadding" format="dimension|reference" />
+    <attr name="cvvEndPadding" format="dimension|reference" />
+    <attr name="cvvTopPadding" format="dimension|reference" />
+    <attr name="cvvBottomPadding" format="dimension|reference" />
+
+    <!-- Error Background/Padding Attributes -->
+    <attr name="errorBackground" format="reference" />
+    <attr name="errorBackgroundColor" format="color|reference" />
+    <attr name="errorBorderColor" format="color|reference" />
+    <attr name="errorBorderWidth" format="dimension|reference" />
+    <attr name="errorBorderRadius" format="dimension|reference" />
+    <attr name="errorStartPadding" format="dimension|reference" />
+    <attr name="errorEndPadding" format="dimension|reference" />
+    <attr name="errorTopPadding" format="dimension|reference" />
+    <attr name="errorBottomPadding" format="dimension|reference" />
+
+    <!-- Error Layout Attributes-->
+    <attr name="errorGravity">
+        <!-- DO NOT CHANGE THESE VALUES- These values map to Android's core operating system -->
+        <flag name="top" value="0x30" />
+        <flag name="bottom" value="0x50" />
+        <flag name="left" value="0x03" />
+        <flag name="right" value="0x05" />
+        <flag name="center_vertical" value="0x10" />
+        <flag name="center_horizontal" value="0x01" />
+        <flag name="center" value="0x11" />
+        <flag name="start" value="0x00800003" />
+        <flag name="end" value="0x00800005" />
+        <!-- DO NOT CHANGE THESE VALUES - These values map to Android's core operating system -->
+    </attr>
+
+    <!-- Text Styling Attributes -->
+    <attr name="textAppearance" format="reference" />
+    <attr name="textColor" format="color|reference" />
+    <attr name="errorTextAppearance" format="reference" />
+    <attr name="errorTextColor" format="color|reference" />
+    <attr name="cursorTextColor" format="color|reference" />
+    <attr name="hintTextColor" format="color|reference" />
+    <attr name="textSize" format="dimension|reference" />
+    <attr name="errorTextSize" format="dimension|reference" />
+    <attr name="focusedHintTextColor" format="color|reference" />
+
+    <declare-styleable name="PaymentCardDetailsSingleLineView">
+        <!-- Functionality Attributes -->
+        <attr name="cardNumberHint" />
+        <attr name="expirationHint" />
+        <attr name="cvvHint" />
+        <attr name="postalCodeHint" />
+        <attr name="postalCodeEnabled" />
+        <attr name="displayErrors" />
+        <attr name="android:enabled" />
+
+        <!-- Card Background/Padding Attributes -->
+        <attr name="cardBackground" />
+        <attr name="cardBackgroundColor" />
+        <attr name="cardBorderColor" />
+        <attr name="cardBorderWidth" />
+        <attr name="cardBorderRadius" />
+        <attr name="cardStartPadding" />
+        <attr name="cardEndPadding" />
+        <attr name="cardTopPadding" />
+        <attr name="cardBottomPadding" />
+        <attr name="verticalSpacing" />
+
+        <!-- Error Background/Padding Attributes -->
+        <attr name="errorBackground" />
+        <attr name="errorBackgroundColor" />
+        <attr name="errorBorderColor" />
+        <attr name="errorBorderWidth" />
+        <attr name="errorBorderRadius" />
+        <attr name="errorStartPadding" />
+        <attr name="errorEndPadding" />
+        <attr name="errorTopPadding" />
+        <attr name="errorBottomPadding" />
+        <attr name="errorGravity" />
+
+        <!-- Text Style Attributes -->
+        <attr name="textAppearance" />
+        <attr name="textColor" />
+        <attr name="errorTextAppearance" />
+        <attr name="errorTextColor" />
+        <attr name="cursorTextColor" />
+        <attr name="hintTextColor" />
+        <attr name="textSize" />
+        <attr name="errorTextSize" />
+    </declare-styleable>
+
+    <declare-styleable name="PaymentCardDetailsMultiLineView">
+        <!-- Functionality Attributes -->
+        <attr name="cardNumberHint" />
+        <attr name="expirationHint" />
+        <attr name="cvvHint" />
+        <attr name="postalCodeHint" />
+        <attr name="focusedCardNumberHint" />
+        <attr name="focusedExpirationHint" />
+        <attr name="focusedCvvHint" />
+        <attr name="focusedPostalCodeHint" />
+        <attr name="postalCodeEnabled" />
+        <attr name="displayErrors" />
+        <attr name="android:enabled" />
+
+        <!-- Card Background/Padding Attributes -->
+        <attr name="cardBackground" />
+        <attr name="cardBackgroundColor" />
+        <attr name="cardBorderColor" />
+        <attr name="cardBorderWidth" />
+        <attr name="cardBorderRadius" />
+        <attr name="cardStartPadding" />
+        <attr name="cardEndPadding" />
+        <attr name="cardTopPadding" />
+        <attr name="cardBottomPadding" />
+        <attr name="fieldUnderlineColor" />
+        <attr name="focusedFieldUnderlineColor" />
+        <attr name="verticalSpacing" />
+
+        <!-- Error Background/Padding Attributes -->
+        <attr name="errorBackground" />
+        <attr name="errorBackgroundColor" />
+        <attr name="errorBorderColor" />
+        <attr name="errorBorderWidth" />
+        <attr name="errorBorderRadius" />
+        <attr name="errorStartPadding" />
+        <attr name="errorEndPadding" />
+        <attr name="errorTopPadding" />
+        <attr name="errorBottomPadding" />
+        <attr name="errorGravity" />
+
+        <!-- Text Style Attributes -->
+        <attr name="textAppearance" />
+        <attr name="textColor" />
+        <attr name="errorTextAppearance" />
+        <attr name="errorTextColor" />
+        <attr name="cursorTextColor" />
+        <attr name="hintTextColor" />
+        <attr name="textSize" />
+        <attr name="errorTextSize" />
+        <attr name="focusedHintTextColor" />
+    </declare-styleable>
+
+    <declare-styleable name="PaymentCardDetailsForm">
+        <!-- Functionality Attributes -->
+        <attr name="cardNumberHint" />
+        <attr name="expirationHint" />
+        <attr name="cvvHint" />
+        <attr name="postalCodeHint" />
+        <attr name="focusedCardNumberHint" />
+        <attr name="focusedExpirationHint" />
+        <attr name="focusedCvvHint" />
+        <attr name="focusedPostalCodeHint" />
+        <attr name="android:enabled" />
+
+        <!-- Card Background/Padding Attributes -->
+        <attr name="cardBackground" />
+        <attr name="cardBackgroundColor" />
+        <attr name="cardBorderColor" />
+        <attr name="cardBorderWidth" />
+        <attr name="cardBorderRadius" />
+        <attr name="cardStartPadding" />
+        <attr name="cardEndPadding" />
+        <attr name="cardTopPadding" />
+        <attr name="cardBottomPadding" />
+        <attr name="fieldDividerColor" />
+        <attr name="fieldDividerWidth" />
+        <attr name="cardElevation" />
+        <attr name="verticalSpacing" />
+
+        <!-- Error Background/Padding Attributes -->
+        <attr name="errorBackground" />
+        <attr name="errorBackgroundColor" />
+        <attr name="errorBorderColor" />
+        <attr name="errorBorderWidth" />
+        <attr name="errorBorderRadius" />
+        <attr name="errorStartPadding" />
+        <attr name="errorEndPadding" />
+        <attr name="errorTopPadding" />
+        <attr name="errorBottomPadding" />
+        <attr name="errorGravity" />
+
+        <!-- Text Styling Attributes -->
+        <attr name="textAppearance" />
+        <attr name="textColor" />
+        <attr name="errorTextAppearance" />
+        <attr name="errorTextColor" />
+        <attr name="cursorTextColor" />
+        <attr name="hintTextColor" />
+        <attr name="textSize" />
+        <attr name="errorTextSize" />
+        <attr name="focusedHintTextColor" />
+    </declare-styleable>
+
+    <declare-styleable name="PaymentCardCvvView">
+        <!-- Functionality Attributes -->
+        <attr name="cvvHint" />
+        <attr name="displayErrors" />
+        <attr name="android:enabled" />
+
+        <!-- Cvv Background/Padding Attributes -->
+        <attr name="cvvBackground" />
+        <attr name="cvvBackgroundColor" />
+        <attr name="cvvBorderColor" />
+        <attr name="cvvBorderWidth" />
+        <attr name="cvvBorderRadius" />
+        <attr name="cvvStartPadding" />
+        <attr name="cvvEndPadding" />
+        <attr name="cvvTopPadding" />
+        <attr name="cvvBottomPadding" />
+        <attr name="verticalSpacing" />
+
+        <!-- Error Background/Padding Attributes -->
+        <attr name="errorBackground" />
+        <attr name="errorBackgroundColor" />
+        <attr name="errorBorderColor" />
+        <attr name="errorBorderWidth" />
+        <attr name="errorBorderRadius" />
+        <attr name="errorStartPadding" />
+        <attr name="errorEndPadding" />
+        <attr name="errorTopPadding" />
+        <attr name="errorBottomPadding" />
+        <attr name="errorGravity" />
+
+        <!-- Text Style Attributes -->
+        <attr name="textAppearance" />
+        <attr name="textColor" />
+        <attr name="errorTextAppearance" />
+        <attr name="errorTextColor" />
+        <attr name="cursorTextColor" />
+        <attr name="hintTextColor" />
+        <attr name="textSize" />
+        <attr name="errorTextSize" />
+        <attr name="android:gravity" />
+    </declare-styleable>
+</resources>
