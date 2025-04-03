@@ -1,0 +1,3 @@
+rootProject.name = "Olo Pay Test Harness"
+include ':TestHarness'
+include ':OloPaySDK'

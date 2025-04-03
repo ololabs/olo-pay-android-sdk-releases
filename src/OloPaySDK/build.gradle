@@ -1,0 +1,163 @@
+plugins {
+    id "com.android.library"
+    id "kotlin-android"
+    id "kotlin-kapt"
+    id "kotlin-parcelize"
+    id "org.jetbrains.dokka"
+}
+
+android {
+    defaultConfig {
+        compileSdk 35
+        targetSdk 34
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+        // The following argument makes the Android Test Orchestrator run its
+        // "pm clear" command after each test invocation. This command ensures
+        // that the app's state is completely cleared between tests.
+        testInstrumentationRunnerArguments clearPackageData: 'true'
+
+
+        // Updating the Android Gradle Plugin ALWAYS removes this versionName property
+        // because it thinks it is unused. But it is used in our release script. Please
+        // ensure that the following line ALWAYS exists after an upgrade:
+        // versionName rootProject.ext.PUBLISH_VERSION
+        versionName rootProject.ext.PUBLISH_VERSION
+        minSdk 23
+        buildConfigField "String", "SDK_VERSION", "\"${defaultConfig["versionName"]}\""
+    }
+
+    testOptions {
+        execution 'ANDROIDX_TEST_ORCHESTRATOR'
+        managedDevices {
+            localDevices {
+                // A lower resolution device is used here for better emulator performance
+                nexusOneApi27 {
+                    device = "Nexus One"
+                    apiLevel = 27
+                    systemImageSource = "aosp"
+                }
+                nexusOneApi30 {
+                    device = "Nexus One"
+                    apiLevel = 30
+                    systemImageSource = "aosp-atd"
+                }
+                nexusOneApi34 {
+                    device = "Nexus One"
+                    apiLevel = 34
+                    systemImageSource = "aosp-atd"
+                }
+            }
+            groups {
+                allDevices {
+                    targetDevices.add(devices.nexusOneApi27)
+                    targetDevices.add(devices.nexusOneApi30)
+                    targetDevices.add(devices.nexusOneApi34)
+                }
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    flavorDimensions = ["OloPayEnv"]
+    productFlavors {
+        Dev {
+            dimension "OloPayEnv"
+            buildConfigField "String", "SDK_BUILD_TYPE", "\"Internal\""
+        }
+        Prod {
+            dimension "OloPayEnv"
+            buildConfigField "String", "SDK_BUILD_TYPE", "\"Public\""
+        }
+    }
+    namespace 'com.olo.olopay'
+    buildFeatures {
+        buildConfig true
+    }
+}
+
+apply from: "${rootProject.projectDir}/scripts/publish-module-shared.gradle"
+apply from: "${rootProject.projectDir}/scripts/publish-module.gradle"
+apply from: "${rootProject.projectDir}/scripts/publish-dev-module.gradle"
+apply plugin: 'kotlin-android'
+
+tasks.withType(dokkaHtml.getClass()).configureEach {
+    pluginsMapConfiguration.set(
+        ["org.jetbrains.dokka.base.DokkaBase": """{
+            "separateInheritedMembers": true,
+            "customStyleSheets": ["${project.projectDir}/docs/styles/olopay-styles.css"]
+        }"""]
+    )
+}
+
+tasks.withType(dokkaJavadoc.getClass()).configureEach {
+    pluginsMapConfiguration.set(
+        ["org.jetbrains.dokka.base.DokkaBase": """{ 
+            "separateInheritedMembers": true
+        }"""]
+    )
+}
+
+dokkaHtml.configure {
+    dokkaSourceSets {
+        named("main") {
+            skipDeprecated.set(true)
+            includeNonPublic.set(false)
+            suppressObviousFunctions.set(true)
+            suppressInheritedMembers.set(true)
+            skipEmptyPackages.set(true)
+            displayName.set("Olo Pay SDK")
+            reportUndocumented.set(true)
+            includes.from(["docs/setup.md", "docs/package-docs.md"])
+        }
+    }
+}
+
+// This fixes a build error with newer versions of Gradle... See here for more info:
+// https://github.com/Kotlin/dokka/issues/3117#issuecomment-1706535157
+afterEvaluate {
+    tasks["dokkaJavadoc"].dependsOn(tasks.named("kaptDevDebugKotlin"), tasks.named("kaptDevReleaseKotlin"), tasks.named("kaptProdReleaseKotlin"))
+}
+
+dependencies {
+    implementation "androidx.core:core-ktx:1.13.1" // Updates past this version requires an update to Kotlin 2.0.0
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.8.7'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.8.7'
+    implementation "androidx.appcompat:appcompat:1.7.0"
+    implementation "androidx.activity:activity-ktx:1.10.0"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.8.7"
+    implementation "com.google.android.material:material:1.12.0"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0'
+    implementation "com.google.android.gms:play-services-wallet:19.4.0"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    api 'com.stripe:stripe-android:20.53.0' // Updates past this version requires an update to Kotlin 2.0.0
+
+    dokkaPlugin 'org.jetbrains.dokka:android-documentation-plugin:1.9.10'
+
+    // Testing Dependencies
+    testImplementation "junit:junit:4.13.2"
+    testImplementation "org.json:json:20231013"
+    androidTestImplementation "androidx.test.ext:junit:1.2.1"
+    androidTestImplementation "androidx.test.espresso:espresso-core:3.6.1"
+    androidTestImplementation 'org.mockito:mockito-android:5.10.0'
+    androidTestImplementation 'androidx.test:runner:1.6.2'
+    androidTestUtil 'androidx.test:orchestrator:1.5.1'
+}
+repositories {
+    mavenCentral()
+}
