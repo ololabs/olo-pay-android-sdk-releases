@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>PaymentCardCvvView</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+                    <a class="library-name--link" href="../../../index.html">
+                            OloPaySDK
+                    </a>
+            </div>
+            <div class="library-version">
+4.1.1            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":OloPaySDK:dokkaHtml/main">Olo Pay SDK</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="OloPaySDK::com.olo.olopay.controls/PaymentCardCvvView///PointingToDeclaration//-374960122">
+  <div class="breadcrumbs"><a href="../../../index.html">OloPaySDK</a><span class="delimiter">/</span><a href="../index.html">com.olo.olopay.controls</a><span class="delimiter">/</span><span class="current">PaymentCardCvvView</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Payment</span><wbr></wbr><span>Card</span><wbr></wbr><span>Cvv</span><wbr></wbr><span><span>View</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">PaymentCardCvvView</a> <span><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a> </span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">attrs<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/util/AttributeSet.html">AttributeSet</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span> : <a href="https://developer.android.com/reference/kotlin/androidx/constraintlayout/widget/ConstraintLayout.html">ConstraintLayout</a></div><p class="paragraph">Convenience view for collecting CVV details from a user</p><br><h4 class=""> Important:</h4><p class="paragraph"><i>User-entered CVV details are intentionally restricted to reduce PCI compliance scope</i></p><hr><h2 class=""> Styling/Branding</h2><p class="paragraph">This view provides full support for styling and customization, which can be accomplished in the following ways:</p><ul><li><p class="paragraph"><strong>Individual Style Attributes:</strong> Style specific aspects of the view individually</p></li><li><p class="paragraph"><strong>Text Appearance Style Attributes:</strong> Style text using Android's <a href="https://developer.android.com/develop/ui/views/theming/themes#textappearance">TextAppearance</a> styles</p></li><li><p class="paragraph"><strong>Background Resource Attributes:</strong> Style the background using drawable resources</p></li></ul><br><p class="paragraph">XML attributes can be set directly on the view or they can be defined in a style that gets applied to the view. The following examples each produce the same result:</p><h4 class=""> Customizations applied directly to the view:</h4><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// NOTE: This example assumes a namespace definition of `app`. Replace<br>// this with your own namespace qualifier if you use something different<br>&lt;com.olo.olopay.controls.PaymentCardCvvView<br>  app:cvvBorderColor=&quot;@color/android:black&quot;<br>  app:cvvBorderWidth=&quot;2dp&quot; /&gt;<br>/&gt;</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h4 class=""> Customizations applied in a style:</h4><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Style definition<br>&lt;style name=&quot;MyCvvStyle&quot;&gt;<br>  &lt;item name=&quot;cvvBorderColor&quot;&gt;@color/android:black&lt;/item&gt;<br>  &lt;item name=&quot;cvvBorderWidth&quot;&gt;2dp&lt;/item&gt;<br>&lt;/style&gt;<br><br>// Layout file<br>&lt;com.olo.olopay.controls.PaymentCardCvvView<br>  style=&quot;@style/MyCvvStyle&quot; /&gt;</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><hr><h3 class=""> Individual Style Attributes</h3><p class="paragraph">These attributes are responsible for controlling a single aspect of the view. In the case of conflicting styles between these attributes and <i>Text Appearance Style Attributes</i> or <i>Background Resource Attributes</i> these attributes take precedence. <br></p><p class="paragraph">This view supports the following attributes for styling/branding purposes:</p><ul><li><p class="paragraph">cursorColor     /    <i>(See </i><a href="set-cursor-color.html"><i>setCursorColor</i></a><i>)</i></p></li><li><p class="paragraph">cvvBackgroundColor     /    <i>(See </i><a href="set-cvv-background-style.html"><i>setCvvBackgroundStyle</i></a><i>)</i></p></li><li><p class="paragraph">cvvBorderColor     /    <i>(See </i><a href="set-cvv-background-style.html"><i>setCvvBackgroundStyle</i></a><i>)</i></p></li><li><p class="paragraph">cvvBorderRadius     /    <i>(See </i><a href="set-cvv-background-style.html"><i>setCvvBackgroundStyle</i></a><i>)</i></p></li><li><p class="paragraph">cvvBorderWidth     /    <i>(See </i><a href="set-cvv-background-style.html"><i>setCvvBackgroundStyle</i></a><i>)</i></p></li><li><p class="paragraph">cvvBottomPadding     /    <i>(See </i><a href="set-cvv-padding.html"><i>setCvvPadding</i></a><i>)</i></p></li><li><p class="paragraph">cvvEndPadding     /    <i>(See </i><a href="set-cvv-padding.html"><i>setCvvPadding</i></a><i>)</i></p></li><li><p class="paragraph">cvvHint     /    <i>(See </i><a href="set-hint-text.html"><i>setHintText</i></a><i>)</i></p></li><li><p class="paragraph">cvvStartPadding     /    <i>(See </i><a href="set-cvv-padding.html"><i>setCvvPadding</i></a><i>)</i></p></li><li><p class="paragraph">cvvTopPadding     /    <i>(See </i><a href="set-cvv-padding.html"><i>setCvvPadding</i></a><i>)</i></p></li><li><p class="paragraph">displayErrors     /    <i>(See </i><a href="display-errors.html"><i>displayErrors</i></a><i>)</i></p></li><li><p class="paragraph">errorBackgroundColor     /    <i>(See </i><a href="set-error-background-style.html"><i>setErrorBackgroundStyle</i></a><i>)</i></p></li><li><p class="paragraph">errorBorderColor     /    <i>(See </i><a href="set-error-background-style.html"><i>setErrorBackgroundStyle</i></a><i>)</i></p></li><li><p class="paragraph">errorBorderRadius     /    <i>(See </i><a href="set-error-background-style.html"><i>setErrorBackgroundStyle</i></a><i>)</i></p></li><li><p class="paragraph">errorBorderWidth     /    <i>(See </i><a href="set-error-background-style.html"><i>setErrorBackgroundStyle</i></a><i>)</i></p></li><li><p class="paragraph">errorBottomPadding     /    <i>(See </i><a href="set-error-padding.html"><i>setErrorPadding</i></a><i>)</i></p></li><li><p class="paragraph">errorEndPadding     /    <i>(See </i><a href="set-error-padding.html"><i>setErrorPadding</i></a><i>)</i></p></li><li><p class="paragraph">errorGravity     /    <i>(See </i><a href="set-error-gravity.html"><i>setErrorGravity</i></a><i>)</i></p></li><li><p class="paragraph">errorStartPadding     /    <i>(See </i><a href="set-error-padding.html"><i>setErrorPadding</i></a><i>)</i></p></li><li><p class="paragraph">errorTextColor     /    <i>(See </i><a href="set-error-text-color.html"><i>setErrorTextColor</i></a><i>)</i></p></li><li><p class="paragraph">errorTextSize     /    <i>(See </i><a href="set-error-text-size.html"><i>setErrorTextSize</i></a><i>)</i></p></li><li><p class="paragraph">errorTopPadding     /    <i>(See </i><a href="set-error-padding.html"><i>setErrorPadding</i></a><i>)</i></p></li><li><p class="paragraph">hintTextColor     /    <i>(See </i><a href="set-hint-text-color.html"><i>setHintTextColor</i></a><i>)</i></p></li><li><p class="paragraph">textColor     /    <i>(See </i><a href="set-text-color.html"><i>setTextColor</i></a><i>)</i></p></li><li><p class="paragraph">textSize     /    <i>(See </i><a href="set-text-size.html"><i>setTextSize</i></a><i>)</i></p></li><li><p class="paragraph">verticalSpacing     /    <i>(See </i><a href="set-vertical-spacing.html"><i>setVerticalSpacing</i></a><i>)</i></p></li></ul><h4 class=""> Important:</h4><p class="paragraph"><i>Some customizations are only possible when using Text Appearance Style Attributes or Background Resource Attributes. Refer to those sections for more information.</i></p><hr><h3 class=""> Text Appearance Attributes</h3><p class="paragraph">Unlike the text attributes specified in <i>Individual Style Attributes</i> above, where each attribute specifies one aspect of the text's appearance, these attributes define the entire appearance through one attribute using a <a href="https://developer.android.com/develop/ui/views/theming/themes#textappearance">text appearance</a> style. These styles can define text color, text size, hint text color, or even have different appearances defined based on the state of the view (e.g. focused or unfocused, enabled or disabled). For a full list of available attributes, see <a href="https://developer.android.com/reference/android/R.styleable#TextAppearance">TextAppearance</a>.</p><p class="paragraph">This view supports the following text appearance resource attributes for styling/branding purposes:</p><ul><li><p class="paragraph">textAppearance     /    <i>(See </i><a href="set-text-appearance.html"><i>setTextAppearance</i></a><i>)</i></p></li><li><p class="paragraph">errorTextAppearance     /    <i>(See </i><a href="set-error-text-appearance.html"><i>setErrorTextAppearance</i></a><i>)</i></p></li></ul><h4 class=""> Important</h4><p class="paragraph"><i>Text attributes defined directly on this view (from the Individual Style Attributes section above) will override attributes defined by the </i><code class="italic lang-kotlin"><i>textAppearance</i></code><i> and </i><code class="italic lang-kotlin"><i>errorTextAppearance</i></code><i> attributes</i></p><hr><h3 class=""> Background Attributes</h3><p class="paragraph">Unlike the background attributes specified in <i>Individual Style Attributes</i> above, where each attribute specifies one aspect of the background, these attributes define the entire background through one resource id. For example, a single <a href="https://developer.android.com/guide/topics/resources/drawable-resource">drawable resource</a> could be used that specifies padding, border color, border radius, and a gradient background, or even have different backgrounds defined based on the state of the view (e.g. focused or unfocused, enabled or disabled).</p><p class="paragraph">This view supports the following background resource attributes for styling/branding purposes:</p><ul><li><p class="paragraph">cvvBackground     /    <i>(See </i><a href="set-cvv-background-resource.html"><i>setCvvBackgroundResource</i></a><i>)</i></p></li><li><p class="paragraph">errorBackground     /    <i>(See </i><a href="set-error-background-resource.html"><i>setErrorBackgroundResource</i></a><i>)</i></p></li></ul><h4 class=""> Important</h4><p class="paragraph"><i>Background attributes from the Individual Style Attributes section above take precedence over these background attributes.</i></p><hr></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-272122332%2FConstructors%2F-374960122" anchor-label="PaymentCardCvvView" id="-272122332%2FConstructors%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-payment-card-cvv-view.html"><span>Payment</span><wbr></wbr><span>Card</span><wbr></wbr><span>Cvv</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-272122332%2FConstructors%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">attrs<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/util/AttributeSet.html">AttributeSet</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Creates a new instance of <a href="index.html">PaymentCardCvvView</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="40329174%2FProperties%2F-374960122" anchor-label="configurationChangeListener" id="40329174%2FProperties%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="configuration-change-listener.html"><span>configuration</span><wbr></wbr><span>Change</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="40329174%2FProperties%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="configuration-change-listener.html">configurationChangeListener</a><span class="token operator">: </span><a href="../../com.olo.olopay.controls.callbacks/-configuration-change-listener/index.html">ConfigurationChangeListener</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Set this to receive notifications when configuration changes occur</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-180089073%2FProperties%2F-374960122" anchor-label="cvvInputListener" id="-180089073%2FProperties%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="cvv-input-listener.html"><span>cvv</span><wbr></wbr><span>Input</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-180089073%2FProperties%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="cvv-input-listener.html">cvvInputListener</a><span class="token operator">: </span><a href="../../com.olo.olopay.controls.callbacks/-cvv-input-listener/index.html">CvvInputListener</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Set this to receive callbacks about card input events for this control</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2087734254%2FProperties%2F-374960122" anchor-label="cvvTokenParams" id="2087734254%2FProperties%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="cvv-token-params.html"><span>cvv</span><wbr></wbr><span>Token</span><wbr></wbr><span><span>Params</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2087734254%2FProperties%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="cvv-token-params.html">cvvTokenParams</a><span class="token operator">: </span><a href="../../com.olo.olopay.data/-i-cvv-token-params/index.html">ICvvTokenParams</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Get an <a href="../../com.olo.olopay.data/-i-cvv-token-params/index.html">ICvvTokenParams</a> instance that can be used to create an <a href="../../com.olo.olopay.data/-i-cvv-update-token/index.html">ICvvUpdateToken</a> instance. If the field is not valid this will return null.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2140766013%2FProperties%2F-374960122" anchor-label="displayErrors" id="-2140766013%2FProperties%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="display-errors.html"><span>display</span><wbr></wbr><span><span>Errors</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2140766013%2FProperties%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="display-errors.html">displayErrors</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph"><strong>XML Attribute:</strong> <i>displayErrors</i></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="94850451%2FProperties%2F-374960122" anchor-label="fieldState" id="94850451%2FProperties%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="field-state.html"><span>field</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="94850451%2FProperties%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="field-state.html">fieldState</a><span class="token operator">: </span><a href="../../com.olo.olopay.data/-i-card-field-state/index.html">ICardFieldState</a></div><div class="brief "><p class="paragraph">Provides a snapshot of the current state of the field</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1797192578%2FProperties%2F-374960122" anchor-label="isValid" id="-1797192578%2FProperties%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-valid.html"><span>is</span><wbr></wbr><span><span>Valid</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1797192578%2FProperties%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="is-valid.html">isValid</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Whether or not the input field contains a valid CVV value</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-347801533%2FFunctions%2F-374960122" anchor-label="clear" id="-347801533%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="clear.html"><span><span>clear</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-347801533%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="clear.html"><span class="token function">clear</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Clears the text field in this control</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1283670337%2FFunctions%2F-374960122" anchor-label="dismissKeyboard" id="-1283670337%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="dismiss-keyboard.html"><span>dismiss</span><wbr></wbr><span><span>Keyboard</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1283670337%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="dismiss-keyboard.html"><span class="token function">dismissKeyboard</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Dismisses the keyboard, if visible, and removes focus from the input field in this control</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1080486519%2FFunctions%2F-374960122" anchor-label="getErrorFont" id="-1080486519%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-error-font.html"><span>get</span><wbr></wbr><span>Error</span><wbr></wbr><span><span>Font</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1080486519%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-error-font.html"><span class="token function">getErrorFont</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/Typeface.html">Typeface</a></div><div class="brief "><p class="paragraph">Gets the font of the error message</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="76216448%2FFunctions%2F-374960122" anchor-label="getErrorMessage" id="76216448%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-error-message.html"><span>get</span><wbr></wbr><span>Error</span><wbr></wbr><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="76216448%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-error-message.html"><span class="token function">getErrorMessage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ignoreUneditedFieldErrors<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Get the error message that would be displayed if <a href="is-valid.html">isValid</a> is false. Note that <a href="is-valid.html">isValid</a> having a value of <code class="lang-kotlin">false</code> does not necessarily mean there will be an error message (see <a href="get-error-message.html">ignoreUneditedFieldErrors</a> param)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="657600523%2FFunctions%2F-374960122" anchor-label="getFont" id="657600523%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-font.html"><span>get</span><wbr></wbr><span><span>Font</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="657600523%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-font.html"><span class="token function">getFont</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/Typeface.html">Typeface</a></div><div class="brief "><p class="paragraph">Gets the font of the CVV input</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1142745412%2FFunctions%2F-374960122" anchor-label="hasErrorMessage" id="-1142745412%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="has-error-message.html"><span>has</span><wbr></wbr><span>Error</span><wbr></wbr><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1142745412%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="has-error-message.html"><span class="token function">hasErrorMessage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ignoreUneditedFieldErrors<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Check if there is an error message to be displayed.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1626819514%2FFunctions%2F-374960122" anchor-label="requestFocus" id="-1626819514%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-focus.html"><span>request</span><wbr></wbr><span><span>Focus</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1626819514%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="request-focus.html"><span class="token function">requestFocus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">showKeyboard<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Moves focus to the input field</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1038023028%2FFunctions%2F-374960122" anchor-label="setCursorColor" id="1038023028%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-cursor-color.html"><span>set</span><wbr></wbr><span>Cursor</span><wbr></wbr><span><span>Color</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1038023028%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/RequiresApi.html"><span class="token annotation builtin">RequiresApi</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">29</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-cursor-color.html"><span class="token function">setCursorColor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/RequiresApi.html"><span class="token annotation builtin">RequiresApi</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">29</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-cursor-color.html"><span class="token function">setCursorColor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">colorHex<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph"><strong>XML Attribute:</strong> <i>cursorColor</i></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1525073611%2FFunctions%2F-374960122" anchor-label="setCvvBackgroundResource" id="1525073611%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-cvv-background-resource.html"><span>set</span><wbr></wbr><span>Cvv</span><wbr></wbr><span>Background</span><wbr></wbr><span><span>Resource</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1525073611%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-cvv-background-resource.html"><span class="token function">setCvvBackgroundResource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">resourceId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph"><strong>XML Attribute:</strong> <i>cvvBackground</i></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1183439598%2FFunctions%2F-374960122" anchor-label="setCvvBackgroundStyle" id="1183439598%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-cvv-background-style.html"><span>set</span><wbr></wbr><span>Cvv</span><wbr></wbr><span>Background</span><wbr></wbr><span><span>Style</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1183439598%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-cvv-background-style.html"><span class="token function">setCvvBackgroundStyle</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">backgroundColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">borderColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">borderWidthPx<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">borderRadiusPx<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/RequiresApi.html"><span class="token annotation builtin">RequiresApi</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">27</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-cvv-background-style.html"><span class="token function">setCvvBackgroundStyle</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">backgroundColorHex<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">borderColorHex<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">borderWidthPx<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">borderRadiusPx<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph"><strong>XML Attributes:</strong> <i>cvvBackgroundColor, cvvBorderColor, cvvBorderWidth, cvvBorderRadius</i></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1621590071%2FFunctions%2F-374960122" anchor-label="setCvvPadding" id="1621590071%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-cvv-padding.html"><span>set</span><wbr></wbr><span>Cvv</span><wbr></wbr><span><span>Padding</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1621590071%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-cvv-padding.html"><span class="token function">setCvvPadding</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">startPx<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">topPx<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">endPx<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">bottomPx<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph"><strong>XML Attributes:</strong> <i>cvvStartPadding, cvvTopPadding, cvvEndPadding, cvvBottomPadding</i></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-696331824%2FFunctions%2F-374960122" anchor-label="setEnabled" id="-696331824%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-enabled.html"><span>set</span><wbr></wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-696331824%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="set-enabled.html"><span class="token function">setEnabled</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">enabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph"><strong>XML Attribute:</strong> <i>android:enabled</i></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="192275590%2FFunctions%2F-374960122" anchor-label="setErrorBackgroundResource" id="192275590%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-error-background-resource.html"><span>set</span><wbr></wbr><span>Error</span><wbr></wbr><span>Background</span><wbr></wbr><span><span>Resource</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="192275590%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-error-background-resource.html"><span class="token function">setErrorBackgroundResource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">resourceId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph"><strong>XML Attribute:</strong> <i>errorBackground</i></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-574710364%2FFunctions%2F-374960122" anchor-label="setErrorBackgroundStyle" id="-574710364%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-error-background-style.html"><span>set</span><wbr></wbr><span>Error</span><wbr></wbr><span>Background</span><wbr></wbr><span><span>Style</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-574710364%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-error-background-style.html"><span class="token function">setErrorBackgroundStyle</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">backgroundColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">borderColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">borderWidthPx<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">borderRadiusPx<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/RequiresApi.html"><span class="token annotation builtin">RequiresApi</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">27</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-error-background-style.html"><span class="token function">setErrorBackgroundStyle</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">backgroundColorHex<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">borderColorHex<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">borderWidthPx<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">borderRadiusPx<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph"><strong>XML Attributes:</strong> <i>errorBackgroundColor, errorBorderColor, errorBorderWidth, errorBorderRadius</i></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="253507506%2FFunctions%2F-374960122" anchor-label="setErrorFont" id="253507506%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-error-font.html"><span>set</span><wbr></wbr><span>Error</span><wbr></wbr><span><span>Font</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="253507506%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-error-font.html"><span class="token function">setErrorFont</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">font<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/Typeface.html">Typeface</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the error font for the error message</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="486971942%2FFunctions%2F-374960122" anchor-label="setErrorGravity" id="486971942%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-error-gravity.html"><span>set</span><wbr></wbr><span>Error</span><wbr></wbr><span><span>Gravity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="486971942%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-error-gravity.html"><span class="token function">setErrorGravity</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">gravityPosition<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph"><strong>XML Attribute:</strong> <i>errorGravity</i></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2039716402%2FFunctions%2F-374960122" anchor-label="setErrorPadding" id="2039716402%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-error-padding.html"><span>set</span><wbr></wbr><span>Error</span><wbr></wbr><span><span>Padding</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2039716402%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-error-padding.html"><span class="token function">setErrorPadding</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">startPx<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">topPx<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">endPx<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">bottomPx<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph"><strong>XML Attributes:</strong> <i>errorStartPadding, errorTopPadding, errorEndPadding, errorBottomPadding</i></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1698883025%2FFunctions%2F-374960122" anchor-label="setErrorTextAppearance" id="1698883025%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-error-text-appearance.html"><span>set</span><wbr></wbr><span>Error</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>Appearance</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1698883025%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-error-text-appearance.html"><span class="token function">setErrorTextAppearance</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">resourceId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph"><strong>XML Attribute:</strong> <i>errorTextAppearance</i></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="19595286%2FFunctions%2F-374960122" anchor-label="setErrorTextColor" id="19595286%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-error-text-color.html"><span>set</span><wbr></wbr><span>Error</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>Color</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="19595286%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-error-text-color.html"><span class="token function">setErrorTextColor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/RequiresApi.html"><span class="token annotation builtin">RequiresApi</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">27</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-error-text-color.html"><span class="token function">setErrorTextColor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">colorHex<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph"><strong>XML Attribute:</strong> <i>errorTextColor</i></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1921888007%2FFunctions%2F-374960122" anchor-label="setErrorTextSize" id="1921888007%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-error-text-size.html"><span>set</span><wbr></wbr><span>Error</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>Size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1921888007%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-error-text-size.html"><span class="token function">setErrorTextSize</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph"><strong>XML Attribute:</strong> <i>errorTextSize</i></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="141804552%2FFunctions%2F-374960122" anchor-label="setFont" id="141804552%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-font.html"><span>set</span><wbr></wbr><span><span>Font</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="141804552%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-font.html"><span class="token function">setFont</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">font<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/Typeface.html">Typeface</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the font for the CVV input</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1161988228%2FFunctions%2F-374960122" anchor-label="setGravity" id="-1161988228%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-gravity.html"><span>set</span><wbr></wbr><span><span>Gravity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1161988228%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-gravity.html"><span class="token function">setGravity</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">gravityPosition<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph"><strong>XML Attribute:</strong> <i>android:gravity</i></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-918413910%2FFunctions%2F-374960122" anchor-label="setHintText" id="-918413910%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-hint-text.html"><span>set</span><wbr></wbr><span>Hint</span><wbr></wbr><span><span>Text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-918413910%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-hint-text.html"><span class="token function">setHintText</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">hint<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph"><strong>XML Attribute:</strong> <i>cvvHint</i></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="860764600%2FFunctions%2F-374960122" anchor-label="setHintTextColor" id="860764600%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-hint-text-color.html"><span>set</span><wbr></wbr><span>Hint</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>Color</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="860764600%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-hint-text-color.html"><span class="token function">setHintTextColor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/RequiresApi.html"><span class="token annotation builtin">RequiresApi</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">27</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-hint-text-color.html"><span class="token function">setHintTextColor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">colorHex<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph"><strong>XML Attribute:</strong> <i>hintTextColor</i></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1479441339%2FFunctions%2F-374960122" anchor-label="setTextAppearance" id="1479441339%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-text-appearance.html"><span>set</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>Appearance</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1479441339%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-text-appearance.html"><span class="token function">setTextAppearance</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">resourceId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph"><strong>XML Attribute:</strong> <i>textAppearance</i></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="532223430%2FFunctions%2F-374960122" anchor-label="setTextColor" id="532223430%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-text-color.html"><span>set</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>Color</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="532223430%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-text-color.html"><span class="token function">setTextColor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/RequiresApi.html"><span class="token annotation builtin">RequiresApi</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">27</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-text-color.html"><span class="token function">setTextColor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">colorHex<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph"><strong>XML Attribute:</strong> <i>textColor</i></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-709572111%2FFunctions%2F-374960122" anchor-label="setTextSize" id="-709572111%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-text-size.html"><span>set</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>Size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-709572111%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-text-size.html"><span class="token function">setTextSize</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph"><strong>XML Attribute:</strong> <i>textSize</i></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2094298499%2FFunctions%2F-374960122" anchor-label="setVerticalSpacing" id="-2094298499%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-vertical-spacing.html"><span>set</span><wbr></wbr><span>Vertical</span><wbr></wbr><span><span>Spacing</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2094298499%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-vertical-spacing.html"><span class="token function">setVerticalSpacing</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">spacingPx<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph"><strong>XML Attribute:</strong> <i>verticalSpacing</i></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2025 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

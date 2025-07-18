@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>GooglePayButton</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+                    <a class="library-name--link" href="../../../index.html">
+                            OloPaySDK
+                    </a>
+            </div>
+            <div class="library-version">
+4.1.1            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":OloPaySDK:dokkaHtml/main">Olo Pay SDK</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="OloPaySDK::com.olo.olopay.googlepay/GooglePayButton///PointingToDeclaration//-374960122">
+  <div class="breadcrumbs"><a href="../../../index.html">OloPaySDK</a><span class="delimiter">/</span><a href="../index.html">com.olo.olopay.googlepay</a><span class="delimiter">/</span><span class="current">GooglePayButton</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Google</span><wbr></wbr><span>Pay</span><wbr></wbr><span><span>Button</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">GooglePayButton</a> <span><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a> </span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">attrs<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/util/AttributeSet.html">AttributeSet</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">defStyleAttr<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span> : <a href="https://developer.android.com/reference/kotlin/androidx/constraintlayout/widget/ConstraintLayout.html">ConstraintLayout</a></div><p class="paragraph">Convenience view that wraps Google's <span data-unresolved-link="com.google.android.gms.wallet.button/PayButton///PointingToDeclaration/">PayButton</span></p><p class="paragraph">This view provides all styling and customization options provided by Google's <span data-unresolved-link="com.google.android.gms.wallet.button/PayButton///PointingToDeclaration/">PayButton</span> but also adds the following extra functionality:</p><ul><li><p class="paragraph">Styling via XML attributes</p></li><li><p class="paragraph">Use of android:onClick attribute in XML files</p></li><li><p class="paragraph">Ability to update button options after view creation</p></li></ul><h4 class=""> Important:</h4><p class="paragraph">It is possible to use Google's <span data-unresolved-link="com.google.android.gms.wallet.button/PayButton///PointingToDeclaration/">PayButton</span> directly. However, when doing so it is important to ensure that your app uses the same version of <code class="lang-kotlin">com.google.android.gms:play-services-wallet</code> as the Olo Pay SDK. Version mismatches could cause unexpected behavior.</p><hr><h2 class=""> Styling</h2><p class="paragraph">This view provides all styling options provided by Google's <span data-unresolved-link="com.google.android.gms.wallet.button/PayButton///PointingToDeclaration/">PayButton</span>. Styling can be done via XML attributes, or by calling <a href="update-button.html">updateButton</a>.</p><p class="paragraph">XML attributes can be set directly on the view or they can be defined in a style that gets applied to the view. THe following examples each produce the same result:</p><h4 class=""> Customizations applied directly to the view:</h4><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// NOTE: This example assumes a namespace definition of `app`. Replace<br>// this with your own namespace qualifier if using something different<br>&lt;com.olo.olopay.googlepay.GooglePayButton<br>  app:googlePayButtonTheme=&quot;dark&quot;<br>  app:googlePayButtonType=&quot;checkout&quot;<br>  app:googlePayCornerRadius=&quot;4dp&quot;<br>/&gt;</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h4 class=""> Customizations applied in a style:</h4><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Style definition<br>&lt;style name=&quot;GooglePayButtonStyle&quot;&gt;<br>  &lt;item name=&quot;googlePayButtonTheme&quot;&gt;dark&lt;/item&gt;<br>  &lt;item name=&quot;googlePayButtonType&quot;&gt;checkout&lt;/item&gt;<br>  &lt;item name=&quot;googlePayCornerRadius&quot;&gt;4dp&lt;/item&gt;<br>&lt;/style&gt;<br><br>//Layout file<br>&lt;com.olo.olopay.googlepay.GooglePayButton<br>  style=&quot;@style/GooglePayButtonStyle&quot;<br>/&gt;</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><hr></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-1834844456%2FConstructors%2F-374960122" anchor-label="GooglePayButton" id="-1834844456%2FConstructors%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-google-pay-button.html"><span>Google</span><wbr></wbr><span>Pay</span><wbr></wbr><span><span>Button</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1834844456%2FConstructors%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">attrs<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/util/AttributeSet.html">AttributeSet</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">defStyleAttr<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Creates a new instance of <a href="index.html">GooglePayButton</a>. Default styling uses <span data-unresolved-link="com.google.android.gms.wallet.button/ButtonConstants.ButtonTheme/DARK/#/PointingToDeclaration/">ButtonConstants.ButtonTheme.DARK</span>, <span data-unresolved-link="com.google.android.gms.wallet.button/ButtonConstants.ButtonType/CHECKOUT/#/PointingToDeclaration/">ButtonConstants.ButtonType.CHECKOUT</span>, and a corner radius of 8dp</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="1956880611%2FFunctions%2F-374960122" anchor-label="isEnabled" id="1956880611%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-enabled.html"><span>is</span><wbr></wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1956880611%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="is-enabled.html"><span class="token function">isEnabled</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1765894470%2FFunctions%2F-374960122" anchor-label="setEnabled" id="1765894470%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-enabled.html"><span>set</span><wbr></wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1765894470%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="set-enabled.html"><span class="token function">setEnabled</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">enabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Set the enabled/clickable state of the button</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1785556220%2FFunctions%2F-374960122" anchor-label="setOnClickListener" id="-1785556220%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-on-click-listener.html"><span>set</span><wbr></wbr><span>On</span><wbr></wbr><span>Click</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1785556220%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="set-on-click-listener.html"><span class="token function">setOnClickListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">listener<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/view/View.OnClickListener.html">View.OnClickListener</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Set a callback to handle click events.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1017328498%2FFunctions%2F-374960122" anchor-label="updateButton" id="1017328498%2FFunctions%2F-374960122" data-filterable-set=":OloPaySDK:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":OloPaySDK:dokkaHtml/main" data-filterable-set=":OloPaySDK:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="update-button.html"><span>update</span><wbr></wbr><span><span>Button</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1017328498%2FFunctions%2F-374960122"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":OloPaySDK:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="update-button.html"><span class="token function">updateButton</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">theme<span class="token operator">: </span><a href="../-google-pay-button-theme/index.html">GooglePayButtonTheme</a><span class="token punctuation">, </span></span><span class="parameter ">type<span class="token operator">: </span><a href="../-google-pay-button-type/index.html">GooglePayButtonType</a><span class="token punctuation">, </span></span><span class="parameter ">cornerRadiusPx<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Update the button with new options</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2025 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
